@@ -37,7 +37,7 @@ const App = () => (
   
         <div> 
           <Header> </Header> 
-          {/* <hr /> */}
+   
 
         
           <Route exact path="/" component={Login} />
@@ -46,7 +46,7 @@ const App = () => (
         
         </div>
     
-      {/* <SeedFooter></SeedFooter> */}
+     
       </Router>
     </main>
 
