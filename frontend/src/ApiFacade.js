@@ -3,9 +3,11 @@ const URL = "http://localhost:8084/jwtbackend";
 function handleHttpErrors(res) {
     if (!res.ok) {
         throw { message: res.statusText, status: res.status };
+       
     }
     return res.json();
 }
+
 
 class ApiFacade {
 

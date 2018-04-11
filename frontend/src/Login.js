@@ -1,6 +1,7 @@
 
 import React, { Component } from "react"
 import facade from "./ApiFacade";
+import jwtDecode from 'jwt-decode';
 export class LogIn extends Component {
   constructor(props) {
     super(props);
@@ -33,16 +34,29 @@ export class LogIn extends Component {
     )
   }
 }
+
+//https://auth0.com/blog/reactjs-authentication-tutorial/
+// Se under afsnittet Adding Authentication to our ReactJS Front-end
+// Og se her: https://www.npmjs.com/package/jwt-decode
 export class LoggedIn extends Component {
   constructor(props) {
     super(props);
-    this.state = { dataFromServer: "Fetching!!" };
+
+    var userToken = facade.getToken();
+    var decoded = jwtDecode(userToken);
+    var userName = decoded.sub; 
+    var userRoles = decoded.roles;
+
+    this.state = { dataFromServer: "Fetching!!", username : userName, userroles: userRoles };
   }
+
+ 
+
   componentDidMount() {
     try {
       facade.fetchData().then(res => this.setState({ dataFromServer: res }));
     } catch (error) {
-
+      
     }
 
   }
@@ -58,6 +72,7 @@ export class LoggedIn extends Component {
         <div>
           <h2>Data Received from server</h2>
           <h3>{this.state.dataFromServer}</h3>
+          <p>Name: { this.state.username } - Roles: { this.state.userroles }</p> 
 
 
 
