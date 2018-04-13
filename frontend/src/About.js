@@ -1,21 +1,19 @@
 import React from 'react'
-import Login, { LoggedIn } from './Login';
 import StarwarsInfo from './StarwarsInfo';
 import apiFacade from './apiFacade';
 
-const About = ( {data} ) => {
-  const userRole = data;
-  console.log(userRole);
+const About = ({ data }) => {
+
+  const userRole = apiFacade.getRole();
+
   var view = <p>You have to login to see this page!</p>;
 
-  if(userRole === "user") {
+  if (userRole === "user") {
     view = <StarwarsInfo />
 
-  } else if(userRole === "admin") {
+  } else if (userRole === "admin") {
     view = <p>Admin stuff</p>
-  } 
-
-
+  }
 
   return (
     <div>
@@ -28,8 +26,6 @@ const About = ( {data} ) => {
 
     </div>
   )
-    
-    
-  };
+};
 
-  export default About;
+export default About;

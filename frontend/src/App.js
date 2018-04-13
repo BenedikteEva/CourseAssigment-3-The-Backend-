@@ -1,37 +1,12 @@
 import React, { Component } from "react";
 import facade from "./apiFacade";
-import { HashRouter, Route, Link, NavLink, Switch } from 'react-router-dom';
+import { HashRouter, Route, Switch } from 'react-router-dom';
 import './App.css';
-import LogIn, { LoggedIn } from './Login';
+import LogIn from './Login';
 import Texts from './Texts';
 import About from './About';
 import Home from './Home';
-
-
-const Navigation = (props) => {
-
-  //var userRole = LoggedIn.getRole();
-  var userRole = "user";
-
-  if (userRole === "user") {
-    var navigationView = <li><NavLink activeClassName="active" to="/about">About</NavLink></li>
-  }
-
-  return (
-    <div>
-
-      <ul className="header">
-
-        <li><NavLink exact activeClassName="active" to="/">Home</NavLink></li>
-        {navigationView}
-        <li><NavLink activeClassName="active" to="/texts">Texts</NavLink></li>
-
-      </ul>
-
-    </div>
-  )
-
-}
+import Navigation from './Navigation';
 
 class App extends Component {
   constructor(props) {
@@ -39,8 +14,6 @@ class App extends Component {
 
     this.state = {
       loggedIn: false,
-      //userroles: this.props.userroles
-      userroles: ""
     }
   }
 
@@ -56,9 +29,6 @@ class App extends Component {
 
   render() {
 
-    //var userRole = LoggedIn.getRole();
-    var userRole = "user";
-    console.log('App: ' + userRole);
     return (
       <div>
 
@@ -77,18 +47,15 @@ class App extends Component {
 
         </HashRouter>
 
-        {/* <hr /> */}
+
 
         {!this.state.loggedIn ? (<LogIn login={this.login} />) :
+
           (<div>
-            <LoggedIn />
+
+            {/*  <Home /> */}
             <button onClick={this.logout}>Logout</button>
           </div>)}
-
-        <main>
-        </main>
-
-        {/* <SeedFooter></SeedFooter> */}
 
       </div>
     );

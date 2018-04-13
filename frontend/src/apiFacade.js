@@ -11,24 +11,42 @@ function handleHttpErrors(res) {
 }
 
 class ApiFacade {
-
+    
     fetchData = () => {
         const options = this.makeFetchOptions("GET");
         return fetch(URL + "/api/info/user", options).then(handleHttpErrors);
     }
 
-    /* getRole = () => {
-        var userToken = facade.getToken();
-        var decoded = jwtDecode(userToken);
-        //var userName = decoded.sub;
-        var userRoles = decoded.roles;
+    // læser fra token hver gang den ikke er null (hvilket og gælder med refreshes, redirects osv.)
+    getRole = () => {
+        if (facade.getToken() !== null) {
+            var userToken = this.getToken();
+            var decoded = jwtDecode(userToken);
+            //var userName = decoded.sub;
+            var userRoles = decoded.roles;
+        } else {
+            const userRole = "";
+        }
 
         return userRoles;
-    } */
+    }
+
+    getUserName = () => {
+        if (facade.getToken() !== null) {
+            var userToken = this.getToken();
+            var decoded = jwtDecode(userToken);
+            var userName = decoded.sub;
+        } else {
+            const userName = "";
+        }
+
+        return userName;
+    }
 
     setToken = (token) => {
         localStorage.setItem('jwtToken', token)
     }
+
     getToken = () => {
         return localStorage.getItem('jwtToken')
     }
@@ -67,9 +85,7 @@ class ApiFacade {
         }
     }
 }
+
 const facade = new ApiFacade();
 
 export default facade;
-
-
-
