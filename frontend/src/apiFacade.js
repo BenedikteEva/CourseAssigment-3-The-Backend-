@@ -1,5 +1,5 @@
 import jwtDecode from 'jwt-decode';
- 
+
 
 const URL = "http://localhost:8084/jwtbackend";
 
@@ -15,15 +15,6 @@ class ApiFacade {
     fetchData = () => {
         const options = this.makeFetchOptions("GET");
         return fetch(URL + "/api/info/user", options).then(handleHttpErrors);
-    }
-
-    getRole = () => {
-        var userToken = this.getToken();
-
-        let userRoles;
-        console.log("APIF " + userToken);
-        console.log("APIFACADE " + userRoles);
-        return userRoles;
     }
 
     /* getRole = () => {
