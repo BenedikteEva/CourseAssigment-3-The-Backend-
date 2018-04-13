@@ -1,9 +1,11 @@
 import React, { Component } from "react"
 import facade from "./apiFacade";
+import { Alert } from 'reactstrap';
 import { HashRouter, Route, Link, NavLink, Switch } from 'react-router-dom'
 import './App.css';
 import Login, { LoggedIn } from './Login'
 import { About } from './Texts'
+import starwarstheme from './starwars-theme.jpg';
 
 
 const Navigation = (props) => {
@@ -16,14 +18,26 @@ const Navigation = (props) => {
 
   return (
     <div>
+       <Alert color="success">
+       Welcome to intro site.
+      </Alert>
+
+      <Alert color="secondary">
+       <a href="Login" className="alert-link"> Example link to refresh to Login page or easily set to another page. </a>
+      </Alert>
 
       <ul className="header">
-
+       
         <li><NavLink exact activeClassName="active" to="/">Home</NavLink></li>
         {navigationView}
         <li><NavLink activeClassName="active" to="/login">Login</NavLink></li>
       
       </ul>
+
+      <div >
+        <img src={starwarstheme} className="imgPreview" />
+    </div>
+
 
     </div>
   )
@@ -81,4 +95,3 @@ const NoMatch = () => (
     <h1>404 Wrong url!</h1>
   </div>
 );
-
