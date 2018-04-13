@@ -16,11 +16,11 @@ npm install react-router-dom npm install react-navigation --save npm install jwt
 npm install npm install -g create-react-native-app npm install tcomb-form-native npm install react-navigation --save
 
 
-Tilføjet af idag af mig:
+Tilføjet idag af mig:
 
 Link til bootstrap side: https://reactstrap.github.io/
 
-For atbootstrap virker, skal følgende commands nu også skrives efter npm (og yarn vil her ikke virke):
+For at bootstrap virker, skal følgende commands nu også skrives efter npm commands'ne foroven (og yarn commanden vil ikke længere være en mulighed):
 
 - npm install bootstrap --save
 
