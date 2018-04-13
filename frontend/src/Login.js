@@ -1,4 +1,3 @@
-
 import React, { Component } from "react"
 import facade from "./apiFacade";
 import jwtDecode from 'jwt-decode';
@@ -37,6 +36,7 @@ export default class LogIn extends Component {
     )
   }
 }
+
 export class LoggedIn extends Component {
   constructor(props) {
     super(props);
@@ -52,6 +52,16 @@ export class LoggedIn extends Component {
       userroles: userRoles,
     };
   }
+
+  getRole = () => {
+    var userToken = facade.getToken();
+    var decoded = jwtDecode(userToken);
+    var userName = decoded.sub;
+    var userRoles = decoded.roles;
+
+    return userRoles;
+  }
+
   componentDidMount() {
     try {
       facade.fetchData().then(res => this.setState({ dataFromServer: res }));
@@ -62,14 +72,9 @@ export class LoggedIn extends Component {
 
   render() {
 
-    var userroles = this.state.userroles;
-    console.log(userroles);
     return (
       <div>
 
-      <About data={userroles} />
-      <App userroles={userroles} />
-      
         <h2>Data Received from server</h2>
         <h3>{this.state.dataFromServer}</h3>
       </div>
@@ -78,36 +83,3 @@ export class LoggedIn extends Component {
 }
 
 // <App userroles={this.state.userroles} />
-
-
-/* export default class Login extends Component {
-  constructor(props) {
-    super(props);
-    this.state = { loggedIn: false }
-  }
-
-  logout = () => {
-    facade.logout();
-    this.setState({ loggedIn: false });
-  }
-
-  login = (user, pass) => {
-    facade.login(user, pass)
-      .then(res => this.setState({ loggedIn: true }));
-  }
-
-  render() {
-    return (
-      <div>
-        <div>
-
-          {!this.state.loggedIn ? (<LogIn login={this.login} />) :
-            (<div>
-              <LoggedIn />
-              <button onClick={this.logout}>Logout</button>
-            </div>)}
-
-        </div></div>
-    )
-  } */
-//}

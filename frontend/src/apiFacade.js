@@ -1,3 +1,6 @@
+import jwtDecode from 'jwt-decode';
+ 
+
 const URL = "http://localhost:8084/jwtbackend";
 
 function handleHttpErrors(res) {
@@ -13,6 +16,24 @@ class ApiFacade {
         const options = this.makeFetchOptions("GET");
         return fetch(URL + "/api/info/user", options).then(handleHttpErrors);
     }
+
+    getRole = () => {
+        var userToken = this.getToken();
+
+        let userRoles;
+        console.log("APIF " + userToken);
+        console.log("APIFACADE " + userRoles);
+        return userRoles;
+    }
+
+    /* getRole = () => {
+        var userToken = facade.getToken();
+        var decoded = jwtDecode(userToken);
+        //var userName = decoded.sub;
+        var userRoles = decoded.roles;
+
+        return userRoles;
+    } */
 
     setToken = (token) => {
         localStorage.setItem('jwtToken', token)
@@ -35,7 +56,7 @@ class ApiFacade {
                 .then(handleHttpErrors)
                 .then(res => { this.setToken(res.token) })
         } catch (error) {
-            
+
         }
 
     }

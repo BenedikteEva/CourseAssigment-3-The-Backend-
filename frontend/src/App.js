@@ -10,7 +10,8 @@ import Home from './Home';
 
 const Navigation = (props) => {
 
-  var userRole = props.userRole;
+  //var userRole = LoggedIn.getRole();
+  var userRole = "user";
 
   if (userRole === "user") {
     var navigationView = <li><NavLink activeClassName="active" to="/about">About</NavLink></li>
@@ -55,7 +56,8 @@ class App extends Component {
 
   render() {
 
-    var userRole = this.props.userroles;
+    //var userRole = LoggedIn.getRole();
+    var userRole = "user";
     console.log('App: ' + userRole);
     return (
       <div>
@@ -63,7 +65,7 @@ class App extends Component {
         <HashRouter>
           <div>
 
-            <Navigation userRole={userRole} />
+            <Navigation />
 
             <Switch>
               <Route exact path="/" component={Home} />

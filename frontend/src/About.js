@@ -1,6 +1,7 @@
 import React from 'react'
 import Login, { LoggedIn } from './Login';
 import StarwarsInfo from './StarwarsInfo';
+import apiFacade from './apiFacade';
 
 const About = ( {data} ) => {
   const userRole = data;
