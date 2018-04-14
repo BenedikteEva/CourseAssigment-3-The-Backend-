@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import facade from "./apiFacade";
-import { HashRouter, Route, Switch } from 'react-router-dom';
+import { HashRouter, Route, Switch, Redirect } from 'react-router-dom';
 import './App.css';
 import LogIn from './Login';
 import Texts from './Texts';
@@ -19,6 +19,8 @@ class App extends Component {
   }
 
   logout = () => {
+    //Mangler at ændre urlen og gå til Home.
+    <Redirect to="/" component={Home} />
     facade.logout();
     this.setState({ loggedIn: false });
   }
