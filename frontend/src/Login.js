@@ -1,6 +1,7 @@
 
 import React, { Component } from "react"
 import facade from "./apiFacade";
+import { Button, Input, CardText } from 'reactstrap';
 import jwtDecode from 'jwt-decode';
 import App from './App';
 import About from './About';
@@ -25,12 +26,14 @@ export class LogIn extends Component {
 
 
       <div>
-        <h1>Welcome</h1>
+        <h1>
+        <CardText>Welcome</CardText>
+        </h1>
         <h2>Login</h2>
         <form onSubmit={this.login} onChange={this.onChange} >
-          <input placeholder="User Name" id="username" />
-          <input placeholder="Password" id="password" />
-          <button>Login</button>
+          <Input placeholder="User Name" id="username" />
+          <Input placeholder="Password" id="password" />
+          <Button color="success" >Login</Button>
         </form> </div>
 
 
