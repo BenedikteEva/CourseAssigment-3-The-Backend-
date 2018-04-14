@@ -1,13 +1,15 @@
 import React, { Component } from "react";
 import facade from "./apiFacade";
-import { HashRouter, Route, Switch, Redirect } from 'react-router-dom';
+import { Alert, ButtonDropdown } from 'reactstrap';
+import { HashRouter, Route, Switch, Redirect } from 'react-router-dom'
 import './App.css';
 import LogIn from './Login';
-import Texts from './Texts';
 import About from './About';
+import Texts from './Texts';
 import Home from './Home';
 import Navigation from './Navigation';
 import Users from './Users';
+import starwarstheme from './starwars-theme.jpg';
 
 class App extends Component {
   constructor(props) {
@@ -51,8 +53,6 @@ class App extends Component {
 
         </HashRouter>
 
-
-
         {!this.state.loggedIn ? (<LogIn login={this.login} />) :
 
           (<div>
@@ -73,3 +73,4 @@ const NoMatch = () => (
     <h1>404 Wrong url!</h1>
   </div>
 );
+

@@ -19,13 +19,15 @@ export default class LogIn extends Component {
     return (
 
       <div>
-        <h1>Welcome</h1>
+        <h1>
+        <CardText>Welcome</CardText>
+        </h1>
         <h2>Login</h2>
 
         <form onSubmit={this.login} onChange={this.onChange} >
-          <input placeholder="User Name" id="username" />
-          <input placeholder="Password" id="password" />
-          <button>Login</button>
+          <Input placeholder="User Name" id="username" />
+          <Input placeholder="Password" id="password" />
+          <Button color="success" >Login</Button>
         </form> </div>
 
 
