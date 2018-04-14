@@ -7,6 +7,7 @@ import Texts from './Texts';
 import About from './About';
 import Home from './Home';
 import Navigation from './Navigation';
+import Users from './Users';
 
 class App extends Component {
   constructor(props) {
@@ -41,6 +42,7 @@ class App extends Component {
               <Route exact path="/" component={Home} />
               <Route path="/about" component={About} />
               <Route path="/texts" component={Texts} />
+              <Route path="/users" component={Users} />
               <Route component={NoMatch} />
             </Switch>
           </div>
