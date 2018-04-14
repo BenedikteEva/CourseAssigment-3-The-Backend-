@@ -1,87 +1,65 @@
-import React, { Component } from "react"
+import React, { Component } from "react";
 import facade from "./apiFacade";
 import { Alert, ButtonDropdown } from 'reactstrap';
-import { HashRouter, Route, Link, NavLink, Switch } from 'react-router-dom'
+import { HashRouter, Route, Switch, Redirect } from 'react-router-dom'
 import './App.css';
-import Login, { LoggedIn } from './Login'
-import { About } from './Texts'
+import LogIn from './Login';
+import About from './About';
+import Texts from './Texts';
+import Home from './Home';
+import Navigation from './Navigation';
+import Users from './Users';
 import starwarstheme from './starwars-theme.jpg';
-
-
-const Navigation = (props) => {
-
-  var userRole = props.userRole;
-
-  if (userRole === "user") {
-    var navigationView = <li><NavLink activeClassName="active" to="/about">About</NavLink></li>
-  }
-
-  return (
-    <div>
-       <Alert color="success">
-       Welcome to intro site.
-      </Alert>
-
-      <Alert color="secondary">
-       <a href="Login" className="alert-link"> Example link to refresh to Login page or easily set to another page. </a>
-      </Alert>
-
-      <ul className="header">
-       
-        <li><NavLink exact activeClassName="active" to="/">Home</NavLink></li>
-        {navigationView}
-        <li><NavLink activeClassName="active" to="/login">Login</NavLink></li>
-
-      </ul>
-
-      <div >
-        <img src={starwarstheme} className="imgPreview" />
-    </div>
-
-
-    </div>
-  )
-
-}
 
 class App extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      //userroles: this.props.userroles
-      userroles: ""
+      loggedIn: false,
     }
+  }
+
+  logout = () => {
+    //Mangler at ændre urlen og gå til Home.
+    <Redirect to="/" component={Home} />
+    facade.logout();
+    this.setState({ loggedIn: false });
+  }
+
+  login = (user, pass) => {
+    facade.login(user, pass)
+      .then(res => this.setState({ loggedIn: true }));
   }
 
   render() {
 
-    var userRole = this.props.userroles;
-    console.log('App: ' + userRole);
     return (
       <div>
 
         <HashRouter>
           <div>
 
-            <Navigation userRole={userRole} />
+            <Navigation />
 
             <Switch>
-              <Route exact path="/" component={Login} />
+              <Route exact path="/" component={Home} />
               <Route path="/about" component={About} />
-              <Route path="/Login" component={Login} />
+              <Route path="/texts" component={Texts} />
+              <Route path="/users" component={Users} />
               <Route component={NoMatch} />
             </Switch>
           </div>
 
         </HashRouter>
 
-        {/* <hr /> */}
+        {!this.state.loggedIn ? (<LogIn login={this.login} />) :
 
-        <main>
-        </main>
+          (<div>
 
-        {/* <SeedFooter></SeedFooter> */}
+            {/*  <Home /> */}
+            <button onClick={this.logout}>Logout</button>
+          </div>)}
 
       </div>
     );
@@ -95,3 +73,4 @@ const NoMatch = () => (
     <h1>404 Wrong url!</h1>
   </div>
 );
+
