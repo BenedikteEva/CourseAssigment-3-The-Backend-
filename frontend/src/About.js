@@ -1,8 +1,9 @@
 import React from 'react'
 import StarwarsInfo from './StarwarsInfo';
+import StarwarsInfoToAdmin from './StarwarsInfoToAdmin';
 import apiFacade from './apiFacade';
 
-const About = ({ data }) => {
+const About = () => {
 
   const userRole = apiFacade.getRole();
 
@@ -12,9 +13,8 @@ const About = ({ data }) => {
     view = <StarwarsInfo />
 
   } else if (userRole === "admin") {
-    view = <p>Admin stuff</p>
+    view = <StarwarsInfoToAdmin />
   }
-
   return (
     <div>
 
