@@ -41,6 +41,7 @@ class App extends Component {
         <HashRouter>
           <div>
             <Header />
+            
             <Navigation />
 
             <Switch>
@@ -55,6 +56,15 @@ class App extends Component {
           </div>
 
         </HashRouter>
+
+        {!this.state.loggedIn ? (<LogIn login={this.login} />) :
+
+          (<div>
+
+            {/*  <Home /> */}
+            <button onClick={this.logout}>Logout</button>
+          </div>)}
+
         <Footer />
 
       </div>
