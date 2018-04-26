@@ -19,7 +19,7 @@ export default class LogIn extends Component {
     return (
 
       <div>
-        <h1>Welcome</h1>
+       
         <h2>Login</h2>
 
         <form onSubmit={this.login} onChange={this.onChange} >
