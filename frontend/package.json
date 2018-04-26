@@ -1,7 +1,7 @@
 {
-  "name": "security",
+  "name": "cuisinebychoicemockup",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "dependencies": {
     "bootstrap": "^4.0.0",
     "jwt-decode": "^2.2.0",
