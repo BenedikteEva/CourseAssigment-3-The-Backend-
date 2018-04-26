@@ -1,6 +1,6 @@
 # We need to do:
 
-- [ ] CheckboxUser
+- [x] CheckboxUser
 - [x] RestaurantSearchResult (for user)
 
 - [x] Header Benedikte
