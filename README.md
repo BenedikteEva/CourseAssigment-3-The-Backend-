@@ -21,16 +21,16 @@
 - [ ] ErrorView
 
 # Dummy Data
-- [ ] Hardcoded usere med navn, kode og userrole, review, liked, visited restaurant,  ect.
+- [x] Hardcoded usere med navn, kode og userrole, review, liked, visited restaurant,  ect.
 
 # Router
 3 views
 
 # For alle
-- [ ] Home
+- [x] Home
 
 # User
-- [ ] Home | User History | User Profile
+- [x] Home | User History | User Profile
 
 # Admin
-- [ ] Home | Statics | User List
+- [x] Home | Statics | User List
