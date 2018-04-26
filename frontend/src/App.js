@@ -1,3 +1,5 @@
+import Header from './Header'
+import Footer from './Footer'
 import React, { Component } from "react";
 import facade from "./apiFacade";
 import { HashRouter, Route, Switch, Redirect } from 'react-router-dom';
@@ -8,7 +10,7 @@ import About from './About';
 import Home from './Home';
 import Navigation from './Navigation';
 import Users from './Users';
-
+import RestaurantList from './RestaurantList'
 class App extends Component {
   constructor(props) {
     super(props);
@@ -35,38 +37,33 @@ class App extends Component {
     return (
       <div>
 
-        <HashRouter>
+     
+     <HashRouter>
           <div>
-
+          <Header> </Header>
             <Navigation />
+    
 
             <Switch>
               <Route exact path="/" component={Home} />
-              <Route path="/about" component={About} />
-              <Route path="/texts" component={Texts} />
-              <Route path="/users" component={Users} />
-              <Route component={NoMatch} />
+              <Route path="/RestaurantList" component={RestaurantList} />
+              <Route path="/Login" component={LogIn} />
+              {/* <Route path="/Register" component={Register} /> */}
+              {/* <Route path="/Profile" component={Profile} /> */}
+              {/* <Route path="/searchresults" component={Search} /> */}
+              <Route component={NoMatch} /> 
             </Switch>
           </div>
 
         </HashRouter>
-
-
-
-        {!this.state.loggedIn ? (<LogIn login={this.login} />) :
-
-          (<div>
-
-            {/*  <Home /> */}
-            <button onClick={this.logout}>Logout</button>
-          </div>)}
-
+{/* <Footer/> */}
       </div>
     );
   }
 }
 
 export default App;
+
 
 const NoMatch = () => (
   <div>

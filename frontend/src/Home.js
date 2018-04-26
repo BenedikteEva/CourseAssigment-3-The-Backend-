@@ -1,6 +1,11 @@
 import React, { Component } from 'react';
-import { Alert } from 'reactstrap';
-import starwarstheme from './images/starwars-theme.jpg';
+import { HashRouter, Route, Switch, Redirect } from 'react-router-dom';
+import RestaurantList from './RestaurantList'
+
+
+
+
+
 class Home extends Component {
     constructor(props) {
         super(props);
@@ -11,19 +16,17 @@ class Home extends Component {
     render() {
         return (
             <div>
+            
 
-                <Alert color="success">
-                    Welcome to intro site.
-                </Alert>
+               <h2>Home</h2>
 
-                {/* <Alert color="secondary"> */}
-                {/* <a href="Login" className="alert-link"> Example link to refresh to Login page or easily set to another page. </a> */}
-                {/* </Alert> */}
-                                
-                <img src={starwarstheme} className="imgPreview" /> 
-                 
-                
-
+                <div>
+                <input placeholder="Location" id="4" />
+                <button id="8">search</button>
+                </div>
+                <div class="container">
+                <RestaurantList />         
+            </div>
             </div>
         )
     }
