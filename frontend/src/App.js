@@ -5,12 +5,11 @@ import facade from "./apiFacade";
 import { HashRouter, Route, Switch, Redirect } from 'react-router-dom';
 import './App.css';
 import LogIn from './Login';
-import Texts from './Texts';
 import About from './About';
 import Home from './Home';
 import Navigation from './Navigation';
 import Users from './Users';
-import RestaurantList from './RestaurantList'
+
 class App extends Component {
   constructor(props) {
     super(props);
@@ -59,6 +58,9 @@ class App extends Component {
 
         </HashRouter>
 
+      
+
+
         {!this.state.loggedIn ? (<LogIn login={this.login} />) :
 
           (<div>
@@ -67,7 +69,8 @@ class App extends Component {
             <button onClick={this.logout}>Logout</button>
           </div>)}
 
-        <Footer />
+      <Footer id="6"></Footer> 
+
 
       </div>
     );
