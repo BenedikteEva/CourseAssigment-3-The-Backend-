@@ -3,6 +3,17 @@ import React, { Component } from "react";
 export const testUser = [
 
   {
+    "userName": "user",
+    "userRole": "user",
+    "password": "test",
+    "search": ["cafe woody"],
+    "checkins": ["cafewoody"],
+    "venuehistory": ["cafewoody"],
+    "venuelikes": ["cafewoody"],
+    "review": "Lorem ipsum dolor sit amet."
+  },
+
+  {
     "userName": "John Doe",
     "userRole": "user",
     "password": "test",
