@@ -40,7 +40,9 @@ class App extends Component {
 
         <HashRouter>
           <div>
-            <Header />
+
+          <Header id="1"> </Header>
+
             <Navigation />
 
             <Switch>
