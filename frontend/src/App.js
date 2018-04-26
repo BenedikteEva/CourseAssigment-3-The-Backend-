@@ -5,7 +5,6 @@ import facade from "./apiFacade";
 import { HashRouter, Route, Switch, Redirect } from 'react-router-dom';
 import './App.css';
 import LogIn from './Login';
-import Texts from './Texts';
 import About from './About';
 import Home from './Home';
 import Navigation from './Navigation';
@@ -56,7 +55,7 @@ class App extends Component {
           </div>
 
         </HashRouter>
-{/* <Footer/> */}
+      <Footer id="6"></Footer> 
       </div>
     );
   }
