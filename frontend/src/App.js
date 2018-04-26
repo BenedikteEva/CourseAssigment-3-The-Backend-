@@ -9,7 +9,7 @@ import About from './About';
 import Home from './Home';
 import Navigation from './Navigation';
 import Users from './Users';
-import RestaurantList from './RestaurantList'
+
 class App extends Component {
   constructor(props) {
     super(props);
@@ -36,21 +36,22 @@ class App extends Component {
     return (
       <div>
 
-     
-     <HashRouter>
+
+        <HashRouter>
           <div>
+
           <Header id="1"> </Header>
+
             <Navigation />
-    
 
             <Switch>
               <Route exact path="/" component={Home} />
-              <Route path="/RestaurantList" component={RestaurantList} />
-              <Route path="/Login" component={LogIn} />
-              {/* <Route path="/Register" component={Register} /> */}
-              {/* <Route path="/Profile" component={Profile} /> */}
-              {/* <Route path="/searchresults" component={Search} /> */}
-              <Route component={NoMatch} /> 
+              {/*<Route path="/UserHistory" component={UserHistory} />*/}
+              {/*<Route path="/Profile" component={Profile} />*/}
+              {/*<Route path="/Statistics" component={Statistics} />*/}
+              {/*<Route path="/UserList" component={UserList} />*/}
+              {/*<Route path="/Register" component={Register} />*/}
+              <Route component={NoMatch} />
             </Switch>
           </div>
 

@@ -12,15 +12,19 @@ export default class foodType extends Component {
 return (
 
 <form>
-  <h6>
-    Type:  </h6>
+ 
+   Choose : 
 
-    fastfood
-    <input id="checkBox" type="checkbox" name="FastFood" />
-    family
+   Fastfood
+    <input id="checkBox" type="checkbox" name="fastfood" />
+   Family
     <input id="checkBox" type="checkbox" name="family" />
-  
-
+   Local
+    <input id="checkBox" type="checkbox" name="local" />
+    Gourmet
+    <input id="checkBox" type="checkbox" name="gourmet" />
+    Asian
+    <input id="checkBox" type="checkbox" name="asian" />
 </form>
 )
     }}
