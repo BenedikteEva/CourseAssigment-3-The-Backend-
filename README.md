@@ -1,36 +1,36 @@
 # We need to do:
 
-- [x] CheckboxUser
-- [x] RestaurantSearchResult (for user)
+- [ ] CheckboxUser
+- [ ] RestaurantSearchResult (for user)
 
-- [x] Header @BoMarconiHenriksen
-- [x] Footer
+- [x] Header Bo
+- [ ] Footer
 
-- [x] Statistics
-- [x] UserSearchResult
-- [x] UserList
+- [ ] Statistics
+- [ ] UserSearchResult
+- [ ] UserList
 
-- [x] ShowUsers
-- [x] EditUser
+- [ ] ShowUsers
+- [ ] EditUser
 
-- [x] UserHistory
-- [x] UserProfile
+- [ ] UserHistory
+- [ ] UserProfile
 
-- [x] RegisterUser
+- [ ] RegisterUser
 
-- [x] ErrorView
+- [ ] ErrorView
 
 # Dummy Data
-- [x] Hardcoded usere med navn, kode og userrole, review, liked, visited restaurant,  ect.
+- [ ] Hardcoded usere med navn, kode og userrole, review, liked, visited restaurant,  ect.
 
 # Router
 3 views
 
 # For alle
-- [x] Home
+- [ ] Home
 
 # User
-- [x] Home | User History | User Profile
+- [ ] Home | User History | User Profile
 
 # Admin
-- [x] Home | Statics | User List
+- [ ] Home | Statics | User List
