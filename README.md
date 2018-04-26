@@ -3,8 +3,8 @@
 - [ ] CheckboxUser
 - [ ] RestaurantSearchResult (for user)
 
-- [x] Header Bo
-- [ ] Footer
+- [x] Header Benedikte
+- [x] Footer Bo
 
 - [ ] Statistics
 - [ ] UserSearchResult
