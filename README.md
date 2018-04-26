@@ -1,7 +1,7 @@
 # We need to do:
 
 - [ ] CheckboxUser
-- [ ] RestaurantSearchResult (for user)
+- [x] RestaurantSearchResult (for user)
 
 - [x] Header Benedikte
 - [x] Footer Bo
