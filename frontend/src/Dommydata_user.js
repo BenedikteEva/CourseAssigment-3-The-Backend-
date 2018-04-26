@@ -1,7 +1,5 @@
 import React, { Component } from "react";
 
-
-
 export const testUser = [
 
   {
@@ -11,7 +9,8 @@ export const testUser = [
     "search": ["cafe woody", "McDonalds", "Raadvad Kro", "Lyngby", "søborg"],
     "checkins": ["cafewoody", "McDonalds", "RaadvadKro"],
     "venuehistory": ["cafewoody", "McDonalds", "RaadvadKro"],
-    "venuelikes": ["cafewoody", "RaadvadKro"]
+    "venuelikes": ["cafewoody", "RaadvadKro"],
+    "review": "Lorem ipsum dolor sit amet."
   },
 
   {
@@ -21,7 +20,8 @@ export const testUser = [
     "search": ["Hardrock Cafe", "Kentucky Friend Chicken", "Effes Pizza"],
     "checkins": ["Hardrock Cafe", "Effes Pizza"],
     "venuehistory": ["Hardrock Cafe", "Effes Pizza"],
-    "venuelikes": ["Hardrock Cafe", "Effes Pizza"]
+    "venuelikes": ["Hardrock Cafe", "Effes Pizza"],
+    "review": "Ut enim ad minim veniam, quis nostrud exercitation."
   },
 
   {
@@ -31,7 +31,8 @@ export const testUser = [
     "search": ["cafe ruccula", "Noma", "Cafe Petrine", "Lyngby", "københavn"],
     "checkins": ["cafe ruccula", "Noma"],
     "venuehistory": ["cafe rucculay", "Noma"],
-    "venuelikes": ["cafe ruccula"]
+    "venuelikes": ["cafe ruccula"],
+    "review": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
   },
 
   {
@@ -41,7 +42,8 @@ export const testUser = [
     "search": ["tante maren", "McDonalds", "RaadvadKro", "Lyngby", "Cafeer", "Brdr. Ox"],
     "checkins": ["cafewoody", "McDonalds", "RaadvadKro"],
     "venuehistory": ["cafewoody", "McDonalds", "RaadvadKro"],
-    "venuelikes": ["cafewoody", "RaadvadKro", "RaadvadKro", "Brdr. Ox"]
+    "venuelikes": ["cafewoody", "RaadvadKro", "RaadvadKro", "Brdr. Ox"],
+    "review": "Excepteur sint."
   },
 
   {
@@ -51,7 +53,8 @@ export const testUser = [
     "search": ["Geranium", "Krebsgaarden", "restaurant amalie"],
     "checkins": ["Geranium"],
     "venuehistory": ["Geranium"],
-    "venuelikes": []
+    "venuelikes": [],
+    "review": ""
   },
 
   {
@@ -61,10 +64,3 @@ export const testUser = [
   },
 
 ];
-
-
-
-
-
-
-
