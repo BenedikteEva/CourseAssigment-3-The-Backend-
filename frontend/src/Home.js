@@ -16,17 +16,15 @@ class Home extends Component {
     render() {
         return (
             <div>
-            
 
-               <h2>Home</h2>
+
+                <h2>Home</h2>
 
                 <div>
-                <input placeholder="Location" id="4" />
-                <button id="8">search</button>
+                    <input placeholder="Location" id="4" />
+                    <button id="8">search</button>
                 </div>
-                <div class="container">
-                <RestaurantList />         
-            </div>
+
             </div>
         )
     }
