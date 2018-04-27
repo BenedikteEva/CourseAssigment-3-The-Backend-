@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { HashRouter, Route, Switch, Redirect } from 'react-router-dom';
 import CheckboxForFoodTypes from './CheckboxForFoodTypes'
 import UserSearchResult from './UserSearchResult';
+import LoginAs from './LoginAs';
 
 class Home extends Component {
     constructor(props) {
@@ -22,6 +23,9 @@ class Home extends Component {
                     <CheckboxForFoodTypes id="3" />
                     <UserSearchResult id="5b" />
                 </div>
+
+                <LoginAs />
+
             </div>
         )
     }
