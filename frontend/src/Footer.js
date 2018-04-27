@@ -8,8 +8,9 @@ function Title(props){
   function Footer() {
     return ( <div className="Footer">
     <footer className="App-footer">
-      <img src={LOGO3} className="App-logo" alt="logo" />
-    <p>Cuisine By Choice - made by the DataBuilders 2018 </p>
+  <p>
+      <img src={LOGO3} className="App-logo" alt="logo"  />
+   Cuisine By Choice - The DataBuilders 2018 </p>
     </footer>
     </div>);
   }
