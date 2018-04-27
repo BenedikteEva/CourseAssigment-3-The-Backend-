@@ -13,7 +13,7 @@
 - [ ] ShowUsers
 - [x] EditUser
 
-- [ ] UserHistory
+- [ ] UserHistory - mangler at få data ud af objektet for en user.
 - [ ] UserProfile - Komponenten er lavet og navigationen er lavet. MANGLER: dummy data.
 
 - [X] RegisterUser - Den er lavet, men der er noget med logikken der ikke virker i Navigation. Bliver vist selv om man er registreret.
