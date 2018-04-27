@@ -18,7 +18,7 @@
 
 - [ ] RegisterUser
 
-- [ ] ErrorView
+- [ ] ErrorView Mangler at vise en fejlbesked.
 
 - [ ] LogedInAs
 
