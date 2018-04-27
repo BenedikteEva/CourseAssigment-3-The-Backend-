@@ -9,6 +9,7 @@ import About from './About';
 import Home from './Home';
 import Navigation from './Navigation';
 import Users from './Users';
+import ErrorView from './ErrorView';
 
 class App extends Component {
   constructor(props) {
@@ -39,14 +40,15 @@ class App extends Component {
 
         <HashRouter>
           <div>
-        
-          <Header id="1"> </Header>
+
+            <Header id="1" />
 
 
             <Navigation />
 
             <Switch>
               <Route exact path="/" component={Home} />
+              <Route exact path="/error" component={ErrorView} />
               {/*<Route path="/UserHistory" component={UserHistory} />*/}
               {/*<Route path="/Profile" component={Profile} />*/}
               {/*<Route path="/Statistics" component={Statistics} />*/}
@@ -58,7 +60,7 @@ class App extends Component {
 
         </HashRouter>
 
-      
+
 
 
         {!this.state.loggedIn ? (<LogIn login={this.login} />) :
@@ -69,7 +71,7 @@ class App extends Component {
             <button onClick={this.logout}>Logout</button>
           </div>)}
 
-      <Footer id="6"></Footer> 
+        <Footer id="6"></Footer>
 
 
       </div>
