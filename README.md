@@ -8,10 +8,10 @@
 
 - [x] Statistics
 - [ ] UserSearchResult
-- [ ] UserList
+- [x] UserList
 
 - [ ] ShowUsers
-- [ ] EditUser
+- [x] EditUser
 
 - [ ] UserHistory
 - [ ] UserProfile - Komponenten er lavet og navigationen er lavet. MANGLER: dummy data.
