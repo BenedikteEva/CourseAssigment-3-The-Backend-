@@ -6,7 +6,7 @@
 - [x] Header Benedikte
 - [x] Footer Bo
 
-- [ ] Statistics
+- [x] Statistics
 - [ ] UserSearchResult
 - [ ] UserList
 
