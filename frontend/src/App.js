@@ -9,6 +9,7 @@ import About from './About';
 import Home from './Home';
 import Navigation from './Navigation';
 import Users from './Users';
+import Statistics from './Statisitics'
 import ErrorView from './ErrorView';
 import UserProfile from './UserProfile';
 
@@ -51,10 +52,13 @@ class App extends Component {
               <Route exact path="/" component={Home} />
               <Route exact path="/error" component={ErrorView} />
               {/*<Route path="/UserHistory" component={UserHistory} />*/}
+              {/*<Route path="/Profile" component={Profile} />*/}
+              <Route path="/Statistics" component={Statistics} />
               <Route path="/profile" component={UserProfile} />
               {/*<Route path="/Statistics" component={Statistics} />*/}
               {/*<Route path="/UserList" component={UserList} />*/}
               {/*<Route path="/Register" component={Register} />*/}
+              {/* <Route path={`/all/:id`}  render={(props) => <Details {...props} />}/> */}
               <Route component={NoMatch} />
             </Switch>
           </div>
@@ -67,8 +71,6 @@ class App extends Component {
         {!this.state.loggedIn ? (<LogIn login={this.login} />) :
 
           (<div>
-
-            {/*  <Home /> */}
             <button onClick={this.logout}>Logout</button>
           </div>)}
 
