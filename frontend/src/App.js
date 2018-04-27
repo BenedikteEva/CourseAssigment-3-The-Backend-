@@ -12,6 +12,8 @@ import Users from './Users';
 import Statistics from './Statisitics'
 import ErrorView from './ErrorView';
 import UserProfile from './UserProfile';
+import RegisterUser from './RegisterUser';
+import UserHistory from './UserHistory';
 
 class App extends Component {
   constructor(props) {
@@ -23,7 +25,7 @@ class App extends Component {
   }
 
   logout = () => {
-    //Mangler at ændre urlen og gå til Home.
+    //TODO: Change url and go to home.
     <Redirect to="/" component={Home} />
     facade.logout();
     this.setState({ loggedIn: false });
@@ -51,13 +53,13 @@ class App extends Component {
             <Switch>
               <Route exact path="/" component={Home} />
               <Route exact path="/error" component={ErrorView} />
-              {/*<Route path="/UserHistory" component={UserHistory} />*/}
+              <Route path="/user_history" component={UserHistory} />
               {/*<Route path="/Profile" component={Profile} />*/}
               <Route path="/Statistics" component={Statistics} />
               <Route path="/profile" component={UserProfile} />
               {/*<Route path="/Statistics" component={Statistics} />*/}
               <Route path="/users" component={Users} />
-              {/*<Route path="/Register" component={Register} />*/}
+              <Route path="/register" component={RegisterUser} />
               {/* <Route path={`/all/:id`}  render={(props) => <Details {...props} />}/> */}
               <Route component={NoMatch} />
             </Switch>
