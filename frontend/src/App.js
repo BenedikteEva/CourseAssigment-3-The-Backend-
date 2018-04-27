@@ -26,8 +26,9 @@ class App extends Component {
   logout = () => {
     //TODO: Change url and go to home.
     <Redirect to="/" component={Home} />
-    facade.logout();
     this.setState({ loggedIn: false });
+    facade.logout();
+   
   }
 
   login = (user, pass) => {
