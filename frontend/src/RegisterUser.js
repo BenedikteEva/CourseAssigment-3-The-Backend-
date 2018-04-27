@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class Profile extends Component {
+class RegisterUser extends Component {
 
     render() {
 
@@ -8,13 +8,14 @@ class Profile extends Component {
             <div>
 
                 <form>
-
                     <div>
                         <label>Name</label>
+                        <input placeholder="Enter Name" />
                     </div>
 
                     <div>
-                        <label>User Role</label>
+                        <label>Password</label>
+                        <input placeholder="Enter Password" />
                     </div>
 
                     <button type="submit">Submit</button>
@@ -26,4 +27,4 @@ class Profile extends Component {
     }
 }
 
-export default Profile;
+export default RegisterUser;
