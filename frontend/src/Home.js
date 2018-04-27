@@ -20,15 +20,15 @@ class Home extends Component {
 
                 <h2>Home</h2>
 
-                <div id="Login">
-                <input placeholder="Location" id="4" />
-                <button id="8">search</button>
+                <div id="search">
+                    <input placeholder="Location" id="4" />
+                    <button id="8">search</button>
                 </div>
+
                 <div class="container">
-                 <FoodType id="3"/>
-                 
-                <Restaurants id="5b" />         
-            </div>
+                    <FoodType id="3" />
+                    <Restaurants id="5b" />
+                </div>
             </div>
         )
     }

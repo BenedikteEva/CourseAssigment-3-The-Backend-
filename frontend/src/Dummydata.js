@@ -7,7 +7,9 @@ export const dummydata = [
         "price_range": "cheap",
         "number_of_reviews": "00",
         "url": "dominos.dk",
-        "imgurl": "http://mediacdn.dominos.co.il/_media/images/header/logo.png"
+        "imgurl": "http://mediacdn.dominos.co.il/_media/images/header/logo.png", 
+        "views": "3", 
+        "avrgReviews": "3.2"
     },
     {
         "name": "McDonalds",
@@ -15,7 +17,9 @@ export const dummydata = [
         "price_range": "cheap",
         "number_of_reviews": "00",
         "url": "www.mcdonalds.dk",
-        "imgurl": "https://www.mcdonalds.com/content/dam/prelaunch/nordic/icons/m_logo.png"
+        "imgurl": "https://www.mcdonalds.com/content/dam/prelaunch/nordic/icons/m_logo.png", 
+        "views": "8", 
+        "avrgReviews": "2.6"
     },
     {
         "name": "Burger King",
@@ -23,7 +27,9 @@ export const dummydata = [
         "price_range": "cheap",
         "number_of_reviews": "00",
         "url": "www.burgerking.dk",
-        "imgurl": "https://media-cdn.tripadvisor.com/media/photo-s/11/0f/6d/9c/burger-king.jpg"
+        "imgurl": "https://media-cdn.tripadvisor.com/media/photo-s/11/0f/6d/9c/burger-king.jpg", 
+        "views": "2", 
+        "avrgReviews": "3"
     },
     {
         "name": "Cafe Woody",
@@ -31,7 +37,9 @@ export const dummydata = [
         "price_range": "expensive",
         "number_of_reviews": "00",
         "url": "www.cafewoody.dk",
-        "imgurl": "http://cafewoody.dk/wp-content/uploads/2012/07/woody_logo21.png"
+        "imgurl": "http://cafewoody.dk/wp-content/uploads/2012/07/woody_logo21.png", 
+        "views": "1", 
+        "avrgReviews": "5"
     },
     {
         "name": "Sticks'nSushi",
@@ -39,7 +47,9 @@ export const dummydata = [
         "price_range": "expensive",
         "number_of_reviews": "00",
         "url": "www.sushi.dk",
-        "imgurl": "https://www.dominos.dk/x.gif.pagespeed.ce.wttFqPSUxL.gif"
+        "imgurl": "https://www.dominos.dk/x.gif.pagespeed.ce.wttFqPSUxL.gif", 
+        "views": "7", 
+        "avrgReviews": "4.8"
     },
     {
         "name": "Big Mamma's Pizzaria",
@@ -47,7 +57,9 @@ export const dummydata = [
         "price_range": "average",
         "number_of_reviews": "00",
         "url": "www.bigmamma-pizzahouse.dk",
-        "imgurl": "http://www.bigmamma-pizzahouse.dk/wp-content/themes/monmarthe/images/header-bg.jpg"
+        "imgurl": "http://www.bigmamma-pizzahouse.dk/wp-content/themes/monmarthe/images/header-bg.jpg", 
+        "views": "3", 
+        "avrgReviews": "4"
     },
     {
         "name": "Rådvad Kro",
@@ -55,7 +67,9 @@ export const dummydata = [
         "price_range": "expensive",
         "number_of_reviews": "00",
         "url": "www.raadvadkro.dk",
-        "imgurl": "http://www.raadvadkro.dk/images/logo.png"
+        "imgurl": "http://www.raadvadkro.dk/images/logo.png", 
+        "views": "1", 
+        "avrgReviews": "5"
     },
     {
         "name": "Post-Pop Steakhouse",
@@ -63,7 +77,9 @@ export const dummydata = [
         "price_range": "expensive",
         "number_of_reviews": "00",
         "url": "www.postpub.dk/",
-        "imgurl": "http://www.postpub.dk/wp-content/uploads/2016/07/Asset-1.svg"
+        "imgurl": "http://www.postpub.dk/wp-content/uploads/2016/07/Asset-1.svg", 
+        "views": "3", 
+        "avrgReviews": "3"
     },
     {
         "name": "Noma",
@@ -71,5 +87,7 @@ export const dummydata = [
         "price_range": "very expensive",
         "number_of_reviews": "00",
         "url": "www.noma.dk",
-        "imgurl": "https://www.dominos.dk/x.gif.pagespeed.ce.wttFqPSUxL.gif"
+        "imgurl": "https://www.dominos.dk/x.gif.pagespeed.ce.wttFqPSUxL.gif", 
+        "views": "6", 
+        "avrgReviews": "4.9"
     }];
