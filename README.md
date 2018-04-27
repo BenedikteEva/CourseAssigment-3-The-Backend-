@@ -16,7 +16,7 @@
 - [ ] UserHistory - mangler at få data ud af objektet for en user.
 - [ ] UserProfile - Komponenten er lavet og navigationen er lavet. MANGLER: dummy data.
 
-- [X] RegisterUser - Den er lavet, men der er noget med logikken der ikke virker i Navigation. Bliver vist selv om man er registreret.
+- [X] RegisterUser - Den er lavet, men der er noget med logikken der ikke virker i Navigation. Bliver vist selv om man er registreret. skulle bare være en && istedet for en ||
 
 - [ ] ErrorView - Er lavet meget enkel. Kig på den hvis der er tid, ellers slet dummydata og udkommenteret kode.
 
