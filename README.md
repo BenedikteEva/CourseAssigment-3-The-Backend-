@@ -22,6 +22,8 @@
 
 - [ ] LogedInAs
 
+- [ ] Login skal tjekke user og password fra dummy data i stedet for server.
+
 # Dummy Data
 - [x] Hardcoded usere med navn, kode og userrole, review, liked, visited restaurant,  ect.
 
