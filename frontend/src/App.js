@@ -56,7 +56,7 @@ class App extends Component {
               <Route path="/Statistics" component={Statistics} />
               <Route path="/profile" component={UserProfile} />
               {/*<Route path="/Statistics" component={Statistics} />*/}
-              {/*<Route path="/UserList" component={UserList} />*/}
+              <Route path="/users" component={Users} />
               {/*<Route path="/Register" component={Register} />*/}
               {/* <Route path={`/all/:id`}  render={(props) => <Details {...props} />}/> */}
               <Route component={NoMatch} />
