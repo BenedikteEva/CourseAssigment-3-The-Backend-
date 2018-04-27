@@ -27,8 +27,6 @@ const UserHistory = () => {
             <hr />
             <h4>Venue History</h4>
             <br />
-
-
         </div>
     } else {
         userData = <h2> Sorry. User does not exist! </h2>;

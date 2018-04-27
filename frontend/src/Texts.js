@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import apiFacade from './apiFacade';
+import ApiFacade from './ApiFacade';
 class Texts extends Component {
   constructor(props) {
     super(props);
@@ -11,15 +11,15 @@ class Texts extends Component {
 
   componentDidMount() {
     try {
-      apiFacade.fetchData().then(res => this.setState({ dataFromServer: res }));
+      ApiFacade.fetchData().then(res => this.setState({ dataFromServer: res }));
     } catch (error) {
 
     }
   }
 
   render() {
-    const userName = apiFacade.getUserName();
-    const userRole = apiFacade.getRole();
+    const userName = ApiFacade.getUserName();
+    const userRole = ApiFacade.getRole();
 
     return (
       <div>
@@ -33,8 +33,6 @@ class Texts extends Component {
       </div>
     )
   }
-
-
 }
 
 export default Texts;

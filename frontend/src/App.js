@@ -1,11 +1,8 @@
-import Header from './Header'
-import Footer from './Footer'
 import React, { Component } from "react";
-import facade from "./apiFacade";
+import facade from "./ApiFacade";
 import { HashRouter, Route, Switch, Redirect } from 'react-router-dom';
 import './App.css';
 import LogIn from './Login';
-import About from './About';
 import Home from './Home';
 import Navigation from './Navigation';
 import Users from './Users';
@@ -14,6 +11,8 @@ import ErrorView from './ErrorView';
 import UserProfile from './UserProfile';
 import RegisterUser from './RegisterUser';
 import UserHistory from './UserHistory';
+import Header from './Header'
+import Footer from './Footer'
 
 class App extends Component {
   constructor(props) {
@@ -54,7 +53,6 @@ class App extends Component {
               <Route exact path="/" component={Home} />
               <Route exact path="/error" component={ErrorView} />
               <Route path="/user_history" component={UserHistory} />
-              {/*<Route path="/Profile" component={Profile} />*/}
               <Route path="/Statistics" component={Statistics} />
               <Route path="/profile" component={UserProfile} />
               {/*<Route path="/Statistics" component={Statistics} />*/}
