@@ -10,6 +10,8 @@ import Home from './Home';
 import Navigation from './Navigation';
 import Users from './Users';
 import Statistics from './Statisitics'
+import ErrorView from './ErrorView';
+import UserProfile from './UserProfile';
 
 class App extends Component {
   constructor(props) {
@@ -41,16 +43,19 @@ class App extends Component {
         <HashRouter>
           <div>
 
-            <Header id="1"> </Header>
+            <Header id="1" />
 
 
             <Navigation />
 
             <Switch>
               <Route exact path="/" component={Home} />
+              <Route exact path="/error" component={ErrorView} />
               {/*<Route path="/UserHistory" component={UserHistory} />*/}
               {/*<Route path="/Profile" component={Profile} />*/}
               <Route path="/Statistics" component={Statistics} />
+              <Route path="/profile" component={UserProfile} />
+              {/*<Route path="/Statistics" component={Statistics} />*/}
               {/*<Route path="/UserList" component={UserList} />*/}
               {/*<Route path="/Register" component={Register} />*/}
               {/* <Route path={`/all/:id`}  render={(props) => <Details {...props} />}/> */}
