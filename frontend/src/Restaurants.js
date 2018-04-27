@@ -1,7 +1,7 @@
 import React from 'react';
 // import Details from './Details'
-import Logo_black from './images/Logo_black.jpg' 
-import Powered_by_Foursquare_black_300 from './images/Powered_by_Foursquare_black_300.png' 
+import Logo_black from './images/Logo_black.jpg'
+import Powered_by_Foursquare_black_300 from './images/Powered_by_Foursquare_black_300.png'
 import {
     HashRouter as Router,
     Route,
@@ -19,7 +19,7 @@ class Restaurants extends React.Component {
     }
 
     componentDidMount() {
-//at some point we will use fetch to get data from our rest endpoints but not made yet. 
+        //at some point we will use fetch to get data from our rest endpoints but not made yet. 
         /*     fetch(URL)
               .then(results => {
                 if (!results.ok) {
@@ -47,7 +47,7 @@ class Restaurants extends React.Component {
             return (
 
                 <tr key={restaurant.id}>
-                  <td> {restaurant.id}</td> <td><img src={restaurant.imgurl} alt="thumb" width="50"></img></td>
+                    <td> {restaurant.id}</td> <td><img src={restaurant.imgurl} alt="thumb" width="50"></img></td>
                     <td>{restaurant.name} <td> </td> <img src={Logo_black} width="20"></img></td><td>{restaurant.type}{restaurant.pricerange}</td>
                     <td>{restaurant.url}<td /> <td> </td>{restaurant.price_range}</td><td>Reviews {restaurant.number_of_reviews}</td>
                     {/* <td><Link to={`/all/${restaurant.name}`}>Details</Link> </td> */}
@@ -59,8 +59,8 @@ class Restaurants extends React.Component {
         this.setState({ restaurants: restaurants })
 
     }
-    
-   
+
+
     render() {
 
 
@@ -68,12 +68,12 @@ class Restaurants extends React.Component {
 
             <div>
 
-        
-           <img src={Powered_by_Foursquare_black_300} alt="p4s" width="200" align="right"></img>
+
+                <img src={Powered_by_Foursquare_black_300} alt="p4s" width="200" align="right"></img>
                 <table className="table">
-               
+
                     <thead>
-                   
+
                         {this.state.headlines}
                     </thead>
                     <tbody>
@@ -92,6 +92,7 @@ class Restaurants extends React.Component {
 }
 
 export default Restaurants;
+
 const dummydata = [{
     "name": "Dominos",
     "type": "fast food",
