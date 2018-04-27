@@ -3,10 +3,12 @@ import data from './dummyData/DummyErrorMessage.json';
 
 const ErrorView = () => {
     var errorMessages = data.errorMessages;
-    var errorMessage = errorMessages.noConnection;
-     
-    console.log(errorMessages);
-    console.log(errorMessage);
+    //var errorMessage = errorMessages.find(e => e.noConnection === "There is no connection to the backend.");
+         
+    /* console.log(errorMessages);
+    console.log(errorMessage); */
+
+    const errorMessage = "There is no connection to the backend.";
 
     return (
         <div>
