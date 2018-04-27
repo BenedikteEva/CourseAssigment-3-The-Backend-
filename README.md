@@ -18,7 +18,7 @@
 
 - [ ] RegisterUser
 
-- [ ] ErrorView - Mangler at vise en fejlbesked.
+- [ ] ErrorView - Er lavet meget enkel. Kig på den hvis der er tid, ellers slet dummydata og udkommenteret kode.
 
 - [ ] LogedInAs
 
