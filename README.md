@@ -14,11 +14,11 @@
 - [ ] EditUser
 
 - [ ] UserHistory
-- [ ] UserProfile
+- [ ] UserProfile - Komponenten er lavet og navigationen er lavet. MANGLER: dummy data.
 
 - [ ] RegisterUser
 
-- [ ] ErrorView Mangler at vise en fejlbesked.
+- [ ] ErrorView - Mangler at vise en fejlbesked.
 
 - [ ] LogedInAs
 
