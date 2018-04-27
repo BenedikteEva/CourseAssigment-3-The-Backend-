@@ -17,9 +17,8 @@ const Navigation = () => {
                 <li><NavLink exact activeClassName="active" to="/">Home</NavLink></li>
                 {userRole === "user" && <li><NavLink activeClassName="active" to="/about">User History</NavLink></li>}
                 {userRole === "user" && <li><NavLink activeClassName="active" to="/texts">Profile</NavLink></li>}
-                {userRole === "admin" && <li><NavLink exact activeClassName="active" to="/users">Statistics</NavLink></li>}
+                {userRole === "admin" && <li><NavLink exact activeClassName="active" to="/statistics">Statistics</NavLink></li>}
                 {userRole === "admin" && <li><NavLink exact activeClassName="active" to="/users">User List</NavLink></li>}
-
 
             </ul>
 

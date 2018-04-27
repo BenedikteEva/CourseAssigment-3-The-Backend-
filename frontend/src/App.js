@@ -9,6 +9,7 @@ import About from './About';
 import Home from './Home';
 import Navigation from './Navigation';
 import Users from './Users';
+import Statistics from './Statisitics'
 
 class App extends Component {
   constructor(props) {
@@ -39,8 +40,8 @@ class App extends Component {
 
         <HashRouter>
           <div>
-        
-          <Header id="1"> </Header>
+
+            <Header id="1"> </Header>
 
 
             <Navigation />
@@ -49,27 +50,26 @@ class App extends Component {
               <Route exact path="/" component={Home} />
               {/*<Route path="/UserHistory" component={UserHistory} />*/}
               {/*<Route path="/Profile" component={Profile} />*/}
-              {/*<Route path="/Statistics" component={Statistics} />*/}
+              <Route path="/Statistics" component={Statistics} />
               {/*<Route path="/UserList" component={UserList} />*/}
               {/*<Route path="/Register" component={Register} />*/}
+              {/* <Route path={`/all/:id`}  render={(props) => <Details {...props} />}/> */}
               <Route component={NoMatch} />
             </Switch>
           </div>
 
         </HashRouter>
 
-      
+
 
 
         {!this.state.loggedIn ? (<LogIn login={this.login} />) :
 
           (<div>
-
-            {/*  <Home /> */}
             <button onClick={this.logout}>Logout</button>
           </div>)}
 
-      <Footer id="6"></Footer> 
+        <Footer id="6"></Footer>
 
 
       </div>
