@@ -7,10 +7,10 @@
 - [x] Footer Bo
 
 - [x] Statistics
-- [ ] UserSearchResult
+- [ ] UserSearchResult Er den færdig?
 - [x] UserList
 
-- [ ] ShowUsers
+- [x] ShowUsers - JEG GÅR UD FRA AT DET ER EN DUBLET OG DET ER DET SAMME SOM USERLIST???
 - [x] EditUser
 
 - [ ] UserHistory - mangler at få data ud af objektet for en user.
