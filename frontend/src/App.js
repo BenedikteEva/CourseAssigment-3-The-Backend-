@@ -10,7 +10,7 @@ import Home from './Home';
 import Navigation from './Navigation';
 import Users from './Users';
 import ErrorView from './ErrorView';
-import Profile from './Profile';
+import UserProfile from './UserProfile';
 
 class App extends Component {
   constructor(props) {
@@ -51,7 +51,7 @@ class App extends Component {
               <Route exact path="/" component={Home} />
               <Route exact path="/error" component={ErrorView} />
               {/*<Route path="/UserHistory" component={UserHistory} />*/}
-              <Route path="/profile" component={Profile} />
+              <Route path="/profile" component={UserProfile} />
               {/*<Route path="/Statistics" component={Statistics} />*/}
               {/*<Route path="/UserList" component={UserList} />*/}
               {/*<Route path="/Register" component={Register} />*/}
