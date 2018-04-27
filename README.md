@@ -20,7 +20,7 @@
 
 - [ ] ErrorView - Er lavet meget enkel. Kig på den hvis der er tid, ellers slet dummydata og udkommenteret kode.
 
-- [ ] LogedInAs
+- [ ] LogedInAs - skal tjekke user og password fra dummy data i stedet for server.
 
 - [ ] Login skal tjekke user og password fra dummy data i stedet for server.
 
