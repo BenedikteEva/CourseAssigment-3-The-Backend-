@@ -20,6 +20,8 @@
 
 - [ ] ErrorView
 
+- [ ] LogedInAs
+
 # Dummy Data
 - [x] Hardcoded usere med navn, kode og userrole, review, liked, visited restaurant,  ect.
 
