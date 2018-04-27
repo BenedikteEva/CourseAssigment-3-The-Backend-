@@ -10,7 +10,7 @@ import {
 
 // const URL = "http://localhost:3456/restaurants";
 
-class Restaurants extends React.Component {
+class UserSearchResult extends React.Component {
 
     constructor(props) {
         super(props);
@@ -36,8 +36,6 @@ class Restaurants extends React.Component {
                 </tr>
             )
 
-
-
             this.setState({ headlines: headlines })
 
         })
@@ -60,14 +58,12 @@ class Restaurants extends React.Component {
 
     }
 
-
     render() {
 
 
         return (
 
             <div>
-
 
                 <img src={Powered_by_Foursquare_black_300} alt="p4s" width="200" align="right"></img>
                 <table className="table">
@@ -91,7 +87,7 @@ class Restaurants extends React.Component {
 
 }
 
-export default Restaurants;
+export default UserSearchResult;
 
 const dummydata = [{
     "name": "Dominos",

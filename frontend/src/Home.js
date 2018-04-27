@@ -1,23 +1,16 @@
 import React, { Component } from 'react';
 import { HashRouter, Route, Switch, Redirect } from 'react-router-dom';
-import Restaurants from './Restaurants'
-import FoodType from './foodTypeCheck'
-
-
-
+import CheckboxForFoodTypes from './CheckboxForFoodTypes'
+import UserSearchResult from './UserSearchResult';
 
 class Home extends Component {
     constructor(props) {
         super(props);
     }
 
-
-
     render() {
         return (
             <div>
-
-
                 <h2>Home</h2>
 
                 <div id="search">
@@ -26,8 +19,8 @@ class Home extends Component {
                 </div>
 
                 <div class="container">
-                    <FoodType id="3" />
-                    <Restaurants id="5b" />
+                    <CheckboxForFoodTypes id="3" />
+                    <UserSearchResult id="5b" />
                 </div>
             </div>
         )

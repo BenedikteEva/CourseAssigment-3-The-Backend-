@@ -1,7 +1,4 @@
-
 import React, { Component } from 'react';
-
-
 
 export default class foodType extends Component {
     constructor(props) {
