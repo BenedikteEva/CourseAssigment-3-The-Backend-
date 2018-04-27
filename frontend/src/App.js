@@ -13,6 +13,7 @@ import Statistics from './Statisitics'
 import ErrorView from './ErrorView';
 import UserProfile from './UserProfile';
 import RegisterUser from './RegisterUser';
+import UserHistory from './UserHistory';
 
 class App extends Component {
   constructor(props) {
@@ -52,7 +53,7 @@ class App extends Component {
             <Switch>
               <Route exact path="/" component={Home} />
               <Route exact path="/error" component={ErrorView} />
-              {/*<Route path="/UserHistory" component={UserHistory} />*/}
+              <Route path="/user_history" component={UserHistory} />
               {/*<Route path="/Profile" component={Profile} />*/}
               <Route path="/Statistics" component={Statistics} />
               <Route path="/profile" component={UserProfile} />

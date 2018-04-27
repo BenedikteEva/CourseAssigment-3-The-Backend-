@@ -16,7 +16,7 @@ const Navigation = () => {
             <ul className="header">
                 <li><NavLink exact activeClassName="active" to="/">Home</NavLink></li>
                 <li><NavLink exact activeClassName="active" to="/error">Error</NavLink></li>
-                {userRole === "user" && <li><NavLink activeClassName="active" to="/about">User History</NavLink></li>}
+                {userRole === "user" && <li><NavLink activeClassName="active" to="/user_history">User History</NavLink></li>}
                 {userRole === "admin" && <li><NavLink exact activeClassName="active" to="/statistics">Statistics</NavLink></li>}
                 {userRole === "user" && <li><NavLink activeClassName="active" to="/profile">Profile</NavLink></li>}
                 {userRole === "admin" && <li><NavLink exact activeClassName="active" to="/users">User List</NavLink></li>}
