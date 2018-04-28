@@ -10,7 +10,7 @@
 - [ ] UserSearchResult Er den færdig?
 - [x] UserList
 
-- [x] ShowUsers - JEG GÅR UD FRA AT DET ER EN DUBLET OG DET ER DET SAMME SOM USERLIST eller detaljer???
+- [x] ShowUsers DUBLET
 - [x] EditUser
 
 - [x] UserHistory 
@@ -20,7 +20,7 @@
 
 - [x] ErrorView 
 
-- [ ] LogedInAs - skal tjekke user og password fra dummy data i stedet for server. 
+- [x] LogedInAs
 
 - [x] Login skal tjekke user og password fra dummy data i stedet for server.VALGTE at tjekke user og password via server alligevel. 
 
