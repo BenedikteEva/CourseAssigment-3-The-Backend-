@@ -20,7 +20,7 @@ const UserHistory = () => {
         )
     }); */
 
-    //The row for the table
+    //The row for the table. IT does not need to be a table.
     if (oneUser) {
         userData = <div>
             <h3>{oneUser.userName}</h3>
