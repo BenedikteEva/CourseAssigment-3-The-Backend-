@@ -3,15 +3,12 @@ import data from './dummyData/TestUsers.json';
 import AddEditUsers from "./AddEditUsers";
 import Profile from './UserProfile'
 
-<<<<<<< HEAD
-=======
 //Users shows a list of all the users to the admin
-const Users = () => {
->>>>>>> a5a093119665b9142adbcb7b862d1979d41786ae
+// const Users = () => {
 
 
 
-export default class Users extends Component {
+export default class Users extends React.Component {
   constructor(props) {
     super(props);
     this.state = { userid: "" }
@@ -42,7 +39,7 @@ await console.log(evt)
    });
  
    return (
-       <div>
+       <div id="5g">
      
            <table className="table">
 
@@ -56,7 +53,7 @@ await console.log(evt)
 
            </table>
 
-          <AddEditUsers />
+          <AddEditUsers id="5h"/>
 
 
        </div >

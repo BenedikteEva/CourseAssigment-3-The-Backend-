@@ -20,7 +20,7 @@ class Home extends Component {
                     <UserSearchResult id="5b" />
                 </div>
 
-               <LoginAs /> 
+               <LoginAs id="7" /> 
 
             </div>
         )
