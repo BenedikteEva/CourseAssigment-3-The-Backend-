@@ -28,7 +28,7 @@ class Statistics extends React.Component {
 
             
                 <tr>
-                 <th></th><th></th> <th >Name</th><th >url</th><th >views</th><th >Price class</th><th >reviews</th><th >average  <img src={star2} width="10"></img></th>
+                 <th></th><th></th><th >Name</th><th >url</th><th >views</th><th >Price class</th><th >reviews</th><th >average  <img src={star2} alt="Star2" width="10"></img></th>
                 </tr>
           
 
@@ -39,7 +39,7 @@ class Statistics extends React.Component {
             return (
 
                 <tr key={restaurant.id}>
-                 <td> <img src={Logo_black} width="20"></img></td> <td> {restaurant.id}</td> <td>{restaurant.name}</td> <td>{restaurant.url}</td>
+                 <td> <img src={Logo_black} alt="Logo" width="20"></img></td> <td> {restaurant.id}</td> <td>{restaurant.name}</td> <td>{restaurant.url}</td>
                   <td>{restaurant.views}</td>
                     <td>{restaurant.price_range}</td><td>{restaurant.number_of_reviews}</td><td> {restaurant.avrgReviews}</td>
                  
