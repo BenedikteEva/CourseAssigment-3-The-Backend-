@@ -4,10 +4,6 @@ import AddEditUsers from "./AddEditUsers";
 import Profile from './UserProfile'
 
 //Users shows a list of all the users to the admin
-// const Users = () => {
-
-
-
 export default class Users extends React.Component {
   constructor(props) {
     super(props);
@@ -44,7 +40,7 @@ await console.log(evt)
            <table className="table">
 
                <thead>
-                   <tr><th>Id</th><th>Name</th><th>User Role</th></tr>
+                    <tr><th>Id</th><th>Name</th><th>Email</th><th>User Role</th></tr>
                </thead>
 
                <tbody>
@@ -54,7 +50,6 @@ await console.log(evt)
            </table>
 
           <AddEditUsers id="5h"/>
-
 
        </div >
    );

@@ -17,7 +17,6 @@ const Navigation = () => {
                 {userRole === "user" && <li><NavLink activeClassName="active" to="/profile">Profile</NavLink></li>}
                 {userRole === "admin" && <li><NavLink exact activeClassName="active" to="/users">User List</NavLink></li>}
                 {(userRole !== "user" && userRole !== "admin") && <li><NavLink activeClassName="active" to="/register">Register</NavLink></li>}
-
             </ul>
 
         </div>
