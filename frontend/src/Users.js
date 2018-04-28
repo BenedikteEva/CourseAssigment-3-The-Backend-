@@ -1,57 +1,55 @@
 import React from "react";
 import data from './dummyData/TestUsers.json';
 import AddEditUsers from "./AddEditUsers";
-import Profile from './UserProfile'
 
 //Users shows a list of all the users to the admin
 export default class Users extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { userid: "" }
-  }
 
-  onEdit =async (evt) => {
-      console.log(evt.target.id)
-      this.setState({userid: evt.target.id})
- evt.preventDefault();
+    constructor(props) {
+        super(props);
+        this.state = { userid: "" }
+    }
 
-await console.log(evt)
-  } 
-  onDelete = (evt) => {
-    this.setState({ [evt.target.id]: evt.target.value })
-  }
+    onEdit = async (evt) => {
+        this.setState({ userid: evt.target.id })
+        evt.preventDefault();
 
-  render(){
-   const row = data.users.map((user) => {
-   
-       return (
+        await console.log(evt)
+    }
+    onDelete = (evt) => {
+        this.setState({ [evt.target.id]: evt.target.value })
+    }
 
-           <tr key={user.id}>
-               <td>{user.id}</td><td>{user.userName}</td><td>{user.userRole}</td>
-               <td><a href="" onClick={this.onEdit} id={user.id}>Edit</a> <a href="" onDelete={this.onDelete} id={user.id}>Delete</a></td>
-           </tr>
+    render() {
+        const row = data.users.map((user) => {
 
-       )
+            return (
 
-   });
- 
-   return (
-       <div id="5g">
-     
-           <table className="table">
+                <tr key={user.id}>
+                    <td>{user.id}</td><td>{user.userName}</td><td>{user.email}</td><td>{user.userRole}</td>
+                    <td><a href="" onClick={this.onEdit} id={user.id}>Edit</a> <a href="" onClick={this.onDelete} id={user.id}>Delete</a></td>
+                </tr>
+            )
+        });
 
-               <thead>
-                    <tr><th>Id</th><th>Name</th><th>Email</th><th>User Role</th></tr>
-               </thead>
+        return (
+            <div id="5g">
 
-               <tbody>
-                   {row}
-               </tbody>
+                <table className="table">
 
-           </table>
+                    <thead>
+                        <tr><th>Id</th><th>Name</th><th>Email</th><th>User Role</th></tr>
+                    </thead>
 
-          <AddEditUsers id="5h"/>
+                    <tbody>
+                        {row}
+                    </tbody>
 
-       </div >
-   );
-}}
+                </table>
+
+                <AddEditUsers id="5h" />
+
+            </div >
+        );
+    }
+}
