@@ -18,7 +18,7 @@
 
 - [X] RegisterUser - Den er lavet, men der er noget med logikken der ikke virker i Navigation. Bliver vist selv om man er registreret. skulle bare være en && istedet for en ||
 
-- [ ] ErrorView - Er lavet meget enkel. Kig på den hvis der er tid, ellers slet dummydata og udkommenteret kode.
+- [x] ErrorView 
 
 - [ ] LogedInAs - skal tjekke user og password fra dummy data i stedet for server. 
 
