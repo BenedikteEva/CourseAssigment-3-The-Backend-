@@ -1,5 +1,6 @@
 import React, { Component } from "react"
 
+//Is used to login. Shows the login and password boxes.
 export default class LogIn extends Component {
   constructor(props) {
     super(props);

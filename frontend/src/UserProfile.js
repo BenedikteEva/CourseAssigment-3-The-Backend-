@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import data from './dummyData/TestUsers.json';
 
+//UserProfile shows the profile information for the user.
 class Profile extends Component {
 
     render() {
