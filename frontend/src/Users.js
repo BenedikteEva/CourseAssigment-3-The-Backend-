@@ -4,13 +4,14 @@ import AddEditUsers from "./AddEditUsers";
 
 //Users shows a list of all the users to the admin
 export default class Users extends React.Component {
+
     constructor(props) {
         super(props);
         this.state = { userid: "" }
     }
 
     onEdit = async (evt) => {
-        this.setState({ userid: evt.target.value })
+        this.setState({ userid: evt.target.id })
         evt.preventDefault();
 
         await console.log(evt)
