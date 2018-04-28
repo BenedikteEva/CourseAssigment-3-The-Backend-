@@ -6,7 +6,7 @@ const ErrorView = () => {
     const errorMessage = "There is no connection to the backend.";
 
     return (
-        <div>
+        <div id="errorview">
             <p>{errorMessage}</p>
         </div>
     );
