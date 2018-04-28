@@ -9,25 +9,53 @@ const UserHistory = () => {
 
     //Find one user
     const oneUser = usersData.find(u => u.id === "2");
-    console.log(oneUser);
+   
+    //Get venue history out of the object and into an array thats easier to manipulate.
+    let venueHistory = [];
+    venueHistory = oneUser.venuehistory;
 
-    //Make a list of users venue history
-    /* const venueHistoryList = oneUser.map( (venue) => {
-        return(
-           
-                <li>{venue.venuehistory}</li>
-           
-        )
-    }); */
+    let venueLikes = [];
+    venueLikes = oneUser.venuelikes;
+    
+    let venueCheckins = [];
+    venueCheckins = oneUser.checkins;
+    
+
+    //Add <p></p> tag around the element and print it as ul.
+    //dangerouslySetInnerHtml is Reacts way of using innerHtml. Read more https://reactjs.org/docs/dom-elements.html
+    function makeUl(arrayList) {
+        let unorderedList = arrayList.map(function (name) {
+            const createMarkup = {__html: "<td>" + name + "</td>"};
+            return <div dangerouslySetInnerHTML={createMarkup} />;
+        });
+
+        return unorderedList;
+    }
+
+    //Create the markdown to be used in the table.
+    const venueHistoryUl = makeUl(venueHistory);
+    const venueLikesUl = makeUl(venueLikes);
+    const venueCheckinsUl = makeUl(venueCheckins);
 
     //The row for the table. IT does not need to be a table.
     if (oneUser) {
         userData = <div>
-            <h3>{oneUser.userName}</h3>
-            <hr />
-            <h4>Venue History</h4>
-            <br />
-        </div>
+            <h3> History for {oneUser.userName}</h3>
+                        
+            <table className="table">
+
+                <thead>
+                    <tr><th>Venue Visited</th><th>Venues I like</th><th>Checkins</th></tr>
+                </thead>
+
+                <tbody>
+                    <td>{venueHistoryUl}</td>
+                    <td>{venueLikesUl}</td>
+                    <td>{venueCheckinsUl}</td>
+                </tbody>
+                
+            </table>
+</div>
     } else {
         userData = <h2> Sorry. User does not exist! </h2>;
     }
