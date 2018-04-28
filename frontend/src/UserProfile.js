@@ -1,8 +1,22 @@
 import React, { Component } from 'react';
+import data from './dummyData/TestUsers.json';
 
 class Profile extends Component {
 
     render() {
+
+        var userData;
+
+        //Move the user data to a const
+        const usersData = data.users;
+
+        //Find one user
+        const oneUser = usersData.find(u => u.id === "2");
+
+        //Get venue history out of the object and into an array thats easier to manipulate.
+        const userName = oneUser.userName;
+        const userRole = oneUser.userRole;
+        const email = oneUser.email;
 
         return (
             <div>
@@ -10,11 +24,20 @@ class Profile extends Component {
                 <form>
 
                     <div>
-                        <label>Name</label>
+                        <label>Name: </label>
+                        {userName}
+                        <input placeholder="Change Name" />
                     </div>
 
                     <div>
-                        <label>User Role</label>
+                        <label>Email: </label>
+                        {email}
+                        <input placeholder="Change Email"/>
+                    </div>
+
+                    <div>
+                        <label>Your Role: </label>
+                        {userRole}
                     </div>
 
                     <button type="submit">Submit</button>
