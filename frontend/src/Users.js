@@ -15,7 +15,8 @@ export default class Users extends React.Component {
   }
 
   onEdit =async (evt) => {
-      this.setState({userid: evt.target.value})
+      console.log(evt.target.id)
+      this.setState({userid: evt.target.id})
  evt.preventDefault();
 
 await console.log(evt)
