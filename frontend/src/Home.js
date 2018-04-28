@@ -1,14 +1,10 @@
 import React, { Component } from 'react';
-import { HashRouter, Route, Switch, Redirect } from 'react-router-dom';
 import CheckboxForFoodTypes from './CheckboxForFoodTypes'
 import UserSearchResult from './UserSearchResult';
 import LoginAs from './LoginAs';
 
 class Home extends Component {
-    constructor(props) {
-        super(props);
-    }
-
+    
     render() {
         return (
             <div>
@@ -19,7 +15,7 @@ class Home extends Component {
                     <button id="8">search</button>
                 </div>
 
-                <div class="container">
+                <div className="container">
                     <CheckboxForFoodTypes id="3" />
                     <UserSearchResult id="5b" />
                 </div>

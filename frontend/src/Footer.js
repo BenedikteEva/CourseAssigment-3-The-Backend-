@@ -1,10 +1,6 @@
 import React from 'react'
 import  LOGO3 from './images/LOGO3.png' 
 
-function Title(props){
-    return <h2> {props.title}</h2>;
-  }
-    
   function Footer() {
     return ( 
       <div className="Footer">

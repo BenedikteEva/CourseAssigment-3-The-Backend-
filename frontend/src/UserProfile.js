@@ -5,8 +5,6 @@ class Profile extends Component {
 
     render() {
 
-        var userData;
-
         //Move the user data to a const
         const usersData = data.users;
 

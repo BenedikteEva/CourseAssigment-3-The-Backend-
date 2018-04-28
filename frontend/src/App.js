@@ -1,13 +1,12 @@
 import React, { Component } from "react";
 import facade from "./ApiFacade";
-import { HashRouter, Route, Switch, Redirect } from 'react-router-dom';
+import { HashRouter, Route, Switch } from 'react-router-dom'; //, Redirect
 import './App.css';
 import LogIn from './Login';
 import Home from './Home';
 import Navigation from './Navigation';
 import Users from './Users';
 import Statistics from './Statisitics'
-import ErrorView from './ErrorView';
 import UserProfile from './UserProfile';
 import RegisterUser from './RegisterUser';
 import UserHistory from './UserHistory';
@@ -24,11 +23,10 @@ class App extends Component {
   }
 
   logout = () => {
-    //TODO: Change url and go to home.
-    <Redirect to="/" component={Home} />
+    //TODO: Change url and go to home. The redirect does not work.
+    //<Redirect to="/" component={Home} />
     this.setState({ loggedIn: false });
     facade.logout();
-   
   }
 
   login = (user, pass) => {
@@ -41,33 +39,25 @@ class App extends Component {
     return (
       <div>
 
-
         <HashRouter>
           <div>
 
             <Header id="1" />
 
-
             <Navigation />
 
             <Switch>
               <Route exact path="/" component={Home} />
-              <Route exact path="/error" component={ErrorView} />
               <Route path="/user_history" component={UserHistory} />
               <Route path="/Statistics" component={Statistics} />
               <Route path="/profile" component={UserProfile} />
-              {/*<Route path="/Statistics" component={Statistics} />*/}
               <Route path="/users" component={Users} />
               <Route path="/register" component={RegisterUser} />
-              {/* <Route path={`/all/:id`}  render={(props) => <Details {...props} />}/> */}
               <Route component={NoMatch} />
             </Switch>
           </div>
 
         </HashRouter>
-
-
-
 
         {!this.state.loggedIn ? (<LogIn login={this.login} />) :
 
@@ -77,14 +67,12 @@ class App extends Component {
 
         <Footer id="6"></Footer>
 
-
       </div>
     );
   }
 }
 
 export default App;
-
 
 const NoMatch = () => (
   <div>
