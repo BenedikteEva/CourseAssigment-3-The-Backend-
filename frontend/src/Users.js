@@ -1,45 +1,59 @@
 import React, { Component } from "react";
 import data from './dummyData/TestUsers.json';
 import AddEditUsers from "./AddEditUsers";
+import Profile from './UserProfile'
 
-const Users = () => {
 
-    //Move the user data to a const
-    const usersData = data.users;
 
-    //The row for the table.
-    //TODO: delete and edit methods for onclick and change the arrow function to a class.
-    const row = usersData.map((user) => {
-        return (
 
-            <tr key={user.id}>
-                <td>{user.id}</td><td>{user.userName}</td><td>{user.userRole}</td>
-                <td><a href="" onClick={this.onEdit} id={user.id}>Edit</a> <a href="" onClick={this.onDelete} id={user.id}>Delete</a></td>
-            </tr>
+export default class Users extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { userid: "" }
+  }
 
-        )
+  onEdit =async (evt) => {
+      this.setState({userid: evt.target.value})
+ evt.preventDefault();
 
-    });
+await console.log(evt)
+  } 
+  onDelete = (evt) => {
+    this.setState({ [evt.target.id]: evt.target.value })
+  }
 
-    return (
-        <div>
+  render(){
+   const row = data.users.map((user) => {
+   
+       return (
 
-            <table className="table">
+           <tr key={user.id}>
+               <td>{user.id}</td><td>{user.userName}</td><td>{user.userRole}</td>
+               <td><a href="" onClick={this.onEdit} id={user.id}>Edit</a> <a href="" onDelete={this.onDelete} id={user.id}>Delete</a></td>
+           </tr>
 
-                <thead>
-                    <tr><th>Id</th><th>Name</th><th>User Role</th></tr>
-                </thead>
+       )
 
-                <tbody>
-                    {row}
-                </tbody>
+   });
+ 
+   return (
+       <div>
+     
+           <table className="table">
 
-            </table>
+               <thead>
+                   <tr><th>Id</th><th>Name</th><th>User Role</th></tr>
+               </thead>
 
-            <AddEditUsers />
+               <tbody>
+                   {row}
+               </tbody>
 
-        </div >
-    );
-}
+           </table>
 
-export default Users;
+          <AddEditUsers />
+
+
+       </div >
+   );
+}}
