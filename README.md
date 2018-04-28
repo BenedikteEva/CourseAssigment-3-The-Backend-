@@ -10,7 +10,7 @@
 - [ ] UserSearchResult Er den færdig?
 - [x] UserList
 
-- [x] ShowUsers - JEG GÅR UD FRA AT DET ER EN DUBLET OG DET ER DET SAMME SOM USERLIST???
+- [x] ShowUsers - JEG GÅR UD FRA AT DET ER EN DUBLET OG DET ER DET SAMME SOM USERLIST eller detaljer???
 - [x] EditUser
 
 - [ ] UserHistory - mangler at få data ud af objektet for en user.
@@ -20,9 +20,9 @@
 
 - [ ] ErrorView - Er lavet meget enkel. Kig på den hvis der er tid, ellers slet dummydata og udkommenteret kode.
 
-- [ ] LogedInAs - skal tjekke user og password fra dummy data i stedet for server.
+- [ ] LogedInAs - skal tjekke user og password fra dummy data i stedet for server. 
 
-- [ ] Login skal tjekke user og password fra dummy data i stedet for server.
+- [x] Login skal tjekke user og password fra dummy data i stedet for server.VALGTE at tjekke user og password via server alligevel. 
 
 # Dummy Data
 - [x] Hardcoded usere med navn, kode og userrole, review, liked, visited restaurant,  ect.
@@ -32,6 +32,7 @@
 
 # For alle
 - [x] Home
+- [x] Register
 
 # User
 - [x] Home | User History | User Profile
