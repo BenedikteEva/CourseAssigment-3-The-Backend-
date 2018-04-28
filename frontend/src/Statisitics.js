@@ -25,13 +25,14 @@ class Statistics extends React.Component {
         const headlines =
 
             <tr>
-                <th></th><th></th><th >Name</th><th >url</th><th >views</th><th >Price class</th><th >reviews</th><th >average  <img src={star2} alt="Star2" width="10"></img></th>
+                <th></th><th>id</th><th >Name</th><th >url</th><th >views</th><th >Price class</th><th >reviews</th><th >average  <img src={star2} alt="Star2" width="10"></img></th>
             </tr>
 
         this.setState({ headlines: headlines })
 
         const restaurantStats = dummydata.map((restaurant) => {
-
+    
+           
             return (
 
                 <tr key={restaurant.name}>
@@ -45,7 +46,7 @@ class Statistics extends React.Component {
                     <td>{restaurant.avrgReviews}</td>
                 </tr>
             )
-        })
+             })
         this.setState({ restaurantStats: restaurantStats })
 
     }
@@ -78,6 +79,7 @@ export default Statistics;
 
 const dummydata = [
     {
+        "id":"1", 
         "name": "Dominos",
         "type": "fast food",
         "price_range": "cheap",
@@ -88,6 +90,7 @@ const dummydata = [
         "avrgReviews": "3.2"
     },
     {
+        "id":"2", 
         "name": "McDonalds",
         "type": "fast food, family",
         "price_range": "cheap",
@@ -98,6 +101,7 @@ const dummydata = [
         "avrgReviews": "2.6"
     },
     {
+        "id":"3", 
         "name": "Burger King",
         "type": "fast food, family",
         "price_range": "cheap",
@@ -108,6 +112,7 @@ const dummydata = [
         "avrgReviews": "3"
     },
     {
+        "id":"4", 
         "name": "Cafe Woody",
         "type": "family, local",
         "price_range": "expensive",
@@ -118,6 +123,7 @@ const dummydata = [
         "avrgReviews": "5"
     },
     {
+        "id":"5", 
         "name": "Sticks'nSushi",
         "type": "family, local, asian",
         "price_range": "expensive",
@@ -128,6 +134,7 @@ const dummydata = [
         "avrgReviews": "4.8"
     },
     {
+        "id":"6", 
         "name": "Big Mamma's Pizzaria",
         "type": "fast food, family, local, pizzaria",
         "price_range": "average",
@@ -138,6 +145,7 @@ const dummydata = [
         "avrgReviews": "4"
     },
     {
+        "id":"7", 
         "name": "Rådvad Kro",
         "type": "luxus, family",
         "price_range": "expensive",
@@ -148,6 +156,8 @@ const dummydata = [
         "avrgReviews": "5"
     },
     {
+        
+        "id":"8", 
         "name": "Post-Pop Steakhouse",
         "type": "local, luxus, steakhouse",
         "price_range": "expensive",
@@ -158,6 +168,7 @@ const dummydata = [
         "avrgReviews": "3"
     },
     {
+        "id":"9", 
         "name": "Noma",
         "type": "luxus, gourmet",
         "price_range": "very expensive",
