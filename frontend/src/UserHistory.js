@@ -1,14 +1,14 @@
 import React, { Component } from "react";
 import data from './dummyData/TestUsers.json';
 
-const UserHistory = () => {
+const UserHistory = (props) => {
     var userData;
 
     //Move the user data to a const
     const usersData = data.users;
 
     //Find one user
-    const oneUser = usersData.find(u => u.id === "2");
+    const oneUser = usersData.find(u => u.userName === props.user);
     console.log(oneUser);
 
     //Make a list of users venue history

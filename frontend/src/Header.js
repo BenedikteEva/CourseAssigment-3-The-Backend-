@@ -12,7 +12,7 @@ function Header() {
     <div className="Header">
 
       <header className="App-header">
-        <img src={LOGO3} className="App-logo" alt="logo" class="centerImage" />
+        <img src={LOGO3} className="App-logo" alt="logo" id="centerImage" />
         <Title title="CuisineByChoice" />
       </header>
 

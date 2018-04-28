@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import facade from "./ApiFacade";
+// import facade from "./ApiFacade";
+import facade from "./FakeFacade";
 import { HashRouter, Route, Switch, Redirect } from 'react-router-dom';
 import './App.css';
 import LogIn from './Login';
@@ -13,7 +14,7 @@ import RegisterUser from './RegisterUser';
 import UserHistory from './UserHistory';
 import Header from './Header'
 import Footer from './Footer'
-
+import LoginAs from './LoginAs'
 class App extends Component {
   constructor(props) {
     super(props);
@@ -33,7 +34,8 @@ class App extends Component {
 
   login = (user, pass) => {
     facade.login(user, pass)
-      .then(res => this.setState({ loggedIn: true }));
+      .then(res =>  this.setState({ loggedIn: true , userRole: res.userRole}));
+     console.log(this.state.userRole)
   }
 
   render() {
@@ -56,7 +58,6 @@ class App extends Component {
               <Route path="/user_history" component={UserHistory} />
               <Route path="/Statistics" component={Statistics} />
               <Route path="/profile" component={UserProfile} />
-              {/*<Route path="/Statistics" component={Statistics} />*/}
               <Route path="/users" component={Users} />
               <Route path="/register" component={RegisterUser} />
               {/* <Route path={`/all/:id`}  render={(props) => <Details {...props} />}/> */}
@@ -70,8 +71,9 @@ class App extends Component {
 
 
         {!this.state.loggedIn ? (<LogIn login={this.login} />) :
-
+    
           (<div>
+           
             <button onClick={this.logout}>Logout</button>
           </div>)}
 

@@ -1,7 +1,3 @@
-import jwtDecode from 'jwt-decode';
-
-//const URL = "http://localhost:8084/jwtbackend";
-const URL = "https://benedikteeva.dk/jwtBackend%2D1.0%2DSNAPSHOT";
 
 function handleHttpErrors(res) {
     if (!res.ok) {
@@ -10,90 +6,142 @@ function handleHttpErrors(res) {
     return res.json();
 }
 
-class ApiFacade {
+class FakeFacade {
 
-    fetchData = () => {
-        const userRole = this.getRole();
-        if (userRole === "user") {
-            const options = this.makeFetchOptions("GET");
-            return fetch(URL + "/api/info/user", options).then(handleHttpErrors);
-        } else if (userRole === "admin") {
-            const options = this.makeFetchOptions("GET");
-            return fetch(URL + "/api/info/admin", options).then(handleHttpErrors);
-        } else {
-            console.log('Error in fetchData - apiData.js');
-        }
-
-    }
+  
 
     // læser fra token hver gang den ikke er null (hvilket også gælder med refreshes, redirects osv.)
-    getRole = () => {
-        if (facade.getToken() !== null) {
-            var userToken = this.getToken();
-            var decoded = jwtDecode(userToken);
-            var userRoles = decoded.roles;
-        } else {
-            const userRole = "";
-        }
+    getRole =async () => {
+    
+  if (this.login!==null){
+      return await this.login.userRole
+    }else{
+console.log("the user object from login never got to getRole")
+    }}
 
-        return userRoles;
-    }
+   getUserName=()=>{
+       return this.login.userName
+   }
 
-    getUserName = () => {
-        if (facade.getToken() !== null) {
-            var userToken = this.getToken();
-            var decoded = jwtDecode(userToken);
-            var userName = decoded.sub;
-        } else {
-            const userName = "";
-        }
-
-        return userName;
-    }
-
-    setToken = (token) => {
-        localStorage.setItem('jwtToken', token)
-    }
-
-    getToken = () => {
-        return localStorage.getItem('jwtToken')
-    }
-    loggedIn = () => {
-        const loggedIn = this.getToken() != null;
-        return loggedIn;
-    }
-    logout = () => {
-        localStorage.removeItem("jwtToken");
-    }
-
-    login = (user, pass) => {
-        try {
-            const options = this.makeFetchOptions("POST", { username: user, password: pass });
-            return fetch(URL + "/api/login", options, true)
-                .then(handleHttpErrors)
-                .then(res => { this.setToken(res.token) })
-        } catch (error) {
-
-        }
-
-    }
-
-    makeFetchOptions = (type, b) => {
-        let headers = {
-            'Accept': 'application/json',
-            'Content-Type': 'application/json'
-        }
-        if (this.loggedIn()) {
-            headers["x-access-token"] = this.getToken();
-        }
-        return {
-            method: type,
-            headers,
-            body: JSON.stringify(b)
-        }
-    }
+   getUserByNAme=(user)=>{
+   
+  const result =users.find(user2=>user2.userName===user) 
+   if(result!==null){
+ return result
+   }else{
+       console.log("no user")
+   }
 }
 
-const facade = new ApiFacade();
+
+    loggedIn = () => {
+       
+        return true;
+    }
+    logout = () => {
+     this.loggedIn=false;
+    }
+
+    login = async (user, pass) => {
+     const userObj=this.getUserByNAme(user)
+     console.log(userObj)
+             return await userObj;
+         
+                 
+            }
+            
+        
+  
+    }
+
+
+const facade = new FakeFacade();
 
 export default facade;
+const users = [
+        
+    {
+        "id": "1",
+        "userName": "user",
+        "userRole": "user",
+        "password": "test",
+        "search": ["cafe woody"],
+        "checkins": ["cafewoody"],
+        "venuehistory": ["cafewoody"],
+        "venuelikes": ["cafewoody"],
+        "review": "Lorem ipsum dolor sit amet."
+      },
+    
+      {
+        "id": "2",
+        "userName": "John Doe",
+        "userRole": "user",
+        "password": "test",
+        "search": ["cafe woody", "McDonalds", "Raadvad Kro", "Lyngby", "søborg"],
+        "checkins": ["cafewoody", "McDonalds", "RaadvadKro"],
+        "venuehistory": ["cafewoody", "McDonalds", "RaadvadKro"],
+        "venuelikes": ["cafewoody", "RaadvadKro"],
+        "review": "Lorem ipsum dolor sit amet."
+      },
+    
+      {
+        "id": "3",
+        "userName": "James Dean",
+        "userRole": "user",
+        "password": "test",
+        "search": ["Hardrock Cafe", "Kentucky Friend Chicken", "Effes Pizza"],
+        "checkins": ["Hardrock Cafe", "Effes Pizza"],
+        "venuehistory": ["Hardrock Cafe", "Effes Pizza"],
+        "venuelikes": ["Hardrock Cafe", "Effes Pizza"],
+        "review": "Ut enim ad minim veniam, quis nostrud exercitation."
+      },
+    
+      {
+        "id": "4",
+        "userName": "Sally HeartField",
+        "userRole": "user",
+        "password": "test",
+        "search": ["cafe ruccula", "Noma", "Cafe Petrine", "Lyngby", "københavn"],
+        "checkins": ["cafe ruccula", "Noma"],
+        "venuehistory": ["cafe rucculay", "Noma"],
+        "venuelikes": ["cafe ruccula"],
+        "review": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+      },
+    
+      {
+        "id": "5",
+        "userName": "Al Pacino",
+        "userRole": "user",
+        "password": "test",
+        "search": ["tante maren", "McDonalds", "RaadvadKro", "Lyngby", "Cafeer", "Brdr. Ox"],
+        "checkins": ["cafewoody", "McDonalds", "RaadvadKro"],
+        "venuehistory": ["cafewoody", "McDonalds", "RaadvadKro"],
+        "venuelikes": ["cafewoody", "RaadvadKro", "RaadvadKro", "Brdr. Ox"],
+        "review": "Excepteur sint."
+      },
+    
+      {
+        "id": "6",
+        "userName": "Andersine And",
+        "userRole": "user",
+        "password": "test",
+        "search": ["Geranium", "Krebsgaarden", "restaurant amalie"],
+        "checkins": ["Geranium"],
+        "venuehistory": ["Geranium"],
+        "venuelikes": [],
+        "review": ""
+      },
+    
+      {
+        "id": "7",
+        "userName": "admin",
+        "userRole": "admin",
+        "password": "test",
+        "search": ["cafe woody"],
+        "checkins": ["cafewoody"],
+        "venuehistory": ["cafewoody"],
+        "venuelikes": ["cafewoody"],
+        "review": "Lorem ipsum dolor sit amet."
+      }
+
+]

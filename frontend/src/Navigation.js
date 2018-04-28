@@ -1,15 +1,15 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { Nav } from 'reactstrap';
-import ApiFacade from './ApiFacade';
+// import ApiFacade from './ApiFacade';
+import facade from "./FakeFacade";
 
 
 
+const Navigation = (props) => {
 
-const Navigation = () => {
-
-    const userRole = ApiFacade.getRole();
-
+    const userRole = facade.getRole
+console.log(userRole)
     return (
         <div>
 
