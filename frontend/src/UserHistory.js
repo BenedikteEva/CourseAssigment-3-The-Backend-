@@ -23,7 +23,7 @@ const UserHistory = () => {
     
 
     //Add <td></td> tag around the element and print it as ul.
-    //dangerouslySetInnerHtml is Reacts way of using innerHtml. Read more https://reactjs.org/docs/dom-elements.html
+    //Note to myself. dangerouslySetInnerHtml is Reacts way of using innerHtml. Read more https://reactjs.org/docs/dom-elements.html
     function makeUl(arrayList) {
         let unorderedList = arrayList.map(function (name) {
             const createMarkup = {__html: "<td>" + name + "</td>"};
@@ -38,7 +38,7 @@ const UserHistory = () => {
     const venueLikesUl = makeUl(venueLikes);
     const venueCheckinsUl = makeUl(venueCheckins);
 
-    //The row for the table. IT does not need to be a table.
+    //The row for the table. It does not need to be a table.
     if (oneUser) {
         userData = <div>
             <h3> History for {oneUser.userName}</h3>
