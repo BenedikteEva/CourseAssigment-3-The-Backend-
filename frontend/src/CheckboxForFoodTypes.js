@@ -1,11 +1,8 @@
 import React, { Component } from 'react';
-
 export default class foodType extends Component {
-    constructor(props) {
-        super(props);
-    }
+    
     render() {
-        const categories = ["fastfood", "family", "local", "gourmet", "asian"]
+        
         return (
 
             <form>

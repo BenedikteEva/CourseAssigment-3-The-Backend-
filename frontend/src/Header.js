@@ -9,10 +9,10 @@ function Header() {
 
   return (
     
-    <div className="Header">
+    <div>
 
       <header className="App-header">
-        <img src={LOGO3} className="App-logo" alt="logo" class="centerImage" />
+        <img src={LOGO3}  alt="logo" className="centerImage" />
         <Title title="CuisineByChoice" />
       </header>
 

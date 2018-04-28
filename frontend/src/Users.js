@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import data from './dummyData/TestUsers.json';
 import AddEditUsers from "./AddEditUsers";
 import Profile from './UserProfile'
