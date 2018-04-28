@@ -1,5 +1,4 @@
 import React from 'react';
-// import Details from './Details'
 import Logo_black from './images/Logo_black.jpg'
 import Powered_by_Foursquare_black_300 from './images/Powered_by_Foursquare_black_300.png'
 import star2 from './images/star2.jpg'

@@ -14,7 +14,7 @@ const Users = () => {
         return (
 
             <tr key={user.id}>
-                <td>{user.id}</td><td>{user.userName}</td><td>{user.userRole}</td>
+                <td>{user.id}</td><td>{user.userName}</td><td>{user.email}</td><td>{user.userRole}</td>
                 <td><a href="" onClick={this.onEdit} id={user.id}>Edit</a> <a href="" onClick={this.onDelete} id={user.id}>Delete</a></td>
             </tr>
 
@@ -28,7 +28,7 @@ const Users = () => {
             <table className="table">
 
                 <thead>
-                    <tr><th>Id</th><th>Name</th><th>User Role</th></tr>
+                    <tr><th>Id</th><th>Name</th><th>Email</th><th>User Role</th></tr>
                 </thead>
 
                 <tbody>
