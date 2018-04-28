@@ -7,7 +7,8 @@ const Users = () => {
     //Move the user data to a const
     const usersData = data.users;
 
-    //The row for the table
+    //The row for the table.
+    //TODO: delete and edit methods for onclick and change the arrow function to a class.
     const row = usersData.map((user) => {
         return (
 

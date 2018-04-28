@@ -20,7 +20,7 @@
             "userRole": "user",
             "password": "test",
             "search": ["cafe woody", "McDonalds", "Raadvad Kro", "Lyngby", "søborg"],
-            "checkins": ["cafewoody", "McDonalds", "RaadvadKro"],
+            "checkins": ["cafewoody", "McDonalds", "RaadvadKro", "Hardrock Cafe"],
             "venuehistory": ["cafewoody", "McDonalds", "RaadvadKro"],
             "venuelikes": ["cafewoody", "RaadvadKro"],
             "review": "Lorem ipsum dolor sit amet."
