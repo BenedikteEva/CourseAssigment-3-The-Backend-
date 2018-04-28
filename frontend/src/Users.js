@@ -15,7 +15,6 @@ export default class Users extends React.Component {
       this.setState({userid: evt.target.id})
  evt.preventDefault();
 
-await console.log(evt)
   } 
   onDelete = (evt) => {
     this.setState({ [evt.target.id]: evt.target.value })
