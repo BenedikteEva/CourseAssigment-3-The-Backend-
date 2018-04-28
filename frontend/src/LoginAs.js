@@ -1,6 +1,7 @@
 import React from 'react';
 import ApiFacade from './ApiFacade';
 
+//The loginAs componenet shows if you are logged in as user or admin.
 const LoginAs = () => {
     var view;
     const userRole = ApiFacade.getRole();

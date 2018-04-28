@@ -1,6 +1,7 @@
 import React from "react";
 import data from './dummyData/TestUsers.json';
 
+//UserHistory shows the users history to the user.
 const UserHistory = () => {
     var userData;
 
@@ -21,7 +22,7 @@ const UserHistory = () => {
     venueCheckins = oneUser.checkins;
     
 
-    //Add <p></p> tag around the element and print it as ul.
+    //Add <td></td> tag around the element and print it as ul.
     //dangerouslySetInnerHtml is Reacts way of using innerHtml. Read more https://reactjs.org/docs/dom-elements.html
     function makeUl(arrayList) {
         let unorderedList = arrayList.map(function (name) {

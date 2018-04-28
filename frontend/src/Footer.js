@@ -1,6 +1,8 @@
 import React from 'react'
 import  LOGO3 from './images/LOGO3.png' 
 
+//Footer for page.
+//It could contain a dummy address and lorem ipsum information.
   function Footer() {
     return ( 
       <div className="Footer">
