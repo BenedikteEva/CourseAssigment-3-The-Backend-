@@ -14,7 +14,7 @@
 - [x] EditUser
 
 - [x] UserHistory 
-- [ ] UserProfile - Komponenten er lavet og navigationen er lavet. MANGLER: dummy data.
+- [x] UserProfile 
 
 - [X] RegisterUser - Den er lavet, men der er noget med logikken der ikke virker i Navigation. Bliver vist selv om man er registreret. skulle bare være en && istedet for en ||
 
