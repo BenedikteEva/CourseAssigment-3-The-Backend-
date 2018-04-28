@@ -2,6 +2,7 @@ import React from "react";
 import data from './dummyData/TestUsers.json';
 import AddEditUsers from "./AddEditUsers";
 
+//Users shows a list of all the users to the admin
 const Users = () => {
 
     //Move the user data to a const

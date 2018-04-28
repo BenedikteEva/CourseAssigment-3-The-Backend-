@@ -2,6 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import ApiFacade from './ApiFacade';
 
+//The navigation for the page. It is also used to filter the navigation bar for user and admin.
 const Navigation = () => {
 
     const userRole = ApiFacade.getRole();
