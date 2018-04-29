@@ -14,6 +14,11 @@ class AddEditUsers extends Component {
                     </div>
 
                     <div>
+                        <label>Email:</label>
+                        <input placeholder="Enter Email" />
+                    </div>
+
+                    <div>
                         <label>User Role:</label>
                         <input placeholder="Enter User Role" />
                     </div>

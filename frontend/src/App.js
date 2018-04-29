@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import facade from "./ApiFacade";
-import { HashRouter, Route, Switch } from 'react-router-dom'; //, Redirect
+import { HashRouter, Route, Switch } from 'react-router-dom'; //, Redirect (For the log out method)
 import './App.css';
 import LogIn from './Login';
 import Home from './Home';
