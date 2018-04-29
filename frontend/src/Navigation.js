@@ -11,14 +11,12 @@ const Navigation = () => {
         <div>
 
             <ul className="header">
-
-                <li><NavLink  activeClassName="active" to="/">Home</NavLink></li>
+                <li><NavLink exact activeClassName="active" to="/">Home</NavLink></li>
                 {userRole === "user" && <li><NavLink activeClassName="active" to="/user_history">User History</NavLink></li>}
-                {userRole === "admin" && <li><NavLink activeClassName="active" to="/statistics">Statistics</NavLink></li>}
+                {userRole === "admin" && <li><NavLink exact activeClassName="active" to="/statistics">Statistics</NavLink></li>}
                 {userRole === "user" && <li><NavLink activeClassName="active" to="/profile">Profile</NavLink></li>}
-                {userRole === "admin" && <li><NavLink  activeClassName="active" to="/users">User List</NavLink></li>}
+                {userRole === "admin" && <li><NavLink exact activeClassName="active" to="/users">User List</NavLink></li>}
                 {(userRole !== "user" && userRole !== "admin") && <li><NavLink activeClassName="active" to="/register">Register</NavLink></li>}
-
             </ul>
 
         </div>

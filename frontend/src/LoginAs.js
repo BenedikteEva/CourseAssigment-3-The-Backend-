@@ -8,11 +8,11 @@ const LoginAs = () => {
     const userName = ApiFacade.getUserName();
     
     if(userRole === "admin") {
-        view = <p>Logged in as: admin, {userName}</p>
+        view = <p>Hello {userName}. You are logged in as: admin.</p>
     } if(userRole === "user") {
-        view = <p>Logged in as: user, {userName}</p>
+        view = <p>Hello {userName}. You are logged in as: user.</p>
     } else {
-        view = <p>You are not logged in.</p>
+        view = <p>Please login or create an account.</p>
     }
 
     return (
