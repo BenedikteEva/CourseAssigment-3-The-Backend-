@@ -1,5 +1,8 @@
 import jwtDecode from 'jwt-decode';
 
+//We fetch the user and login from our backend in the ApiFacade.
+
+
 //const URL = "http://localhost:8084/jwtbackend";
 const URL = "https://benedikteeva.dk/jwtBackend%2D1.0%2DSNAPSHOT";
 

@@ -1,16 +1,9 @@
 import React from 'react';
-// import Details from './Details'
-import Logo_black from './images/Logo_black.jpg' 
-import Powered_by_Foursquare_black_300 from './images/Powered_by_Foursquare_black_300.png' 
-import {
-    HashRouter as Router,
-    Route,
-    Link, NavLink, Switch
-} from 'react-router-dom'
+import Logo_black from './images/Logo_black.jpg'
+import Powered_by_Foursquare_black_300 from './images/Powered_by_Foursquare_black_300.png'
 
-// const URL = "http://localhost:3456/restaurants";
-
-class Restaurants extends React.Component {
+//UserSearchResult shows a list of restaurants based on what the user entered in the search field.
+class UserSearchResult extends React.Component {
 
     constructor(props) {
         super(props);
@@ -19,7 +12,7 @@ class Restaurants extends React.Component {
     }
 
     componentDidMount() {
-//at some point we will use fetch to get data from our rest endpoints but not made yet. 
+        //TODO: At some point we will use fetch to get data from our rest endpoints but not made yet. 
         /*     fetch(URL)
               .then(results => {
                 if (!results.ok) {
@@ -28,39 +21,24 @@ class Restaurants extends React.Component {
                 return results.json();
               }).then(data => {
         */
-        const headlines = dummydata.map((head) => {
-
-            return (
-                <tr>
-                    <th ><img src={Powered_by_Foursquare_black_300} alt="p4s" width="100" ></img></th>
-                </tr>
-            )
-
-
-
-            this.setState({ headlines: headlines })
-
-        })
 
         const restaurants = dummydata.map((restaurant) => {
 
             return (
 
                 <tr key={restaurant.id}>
-                  <td> {restaurant.id}</td> <td><img src={restaurant.imgurl} alt="thumb" width="50"></img></td>
-                    <td>{restaurant.name} <td> </td> <img src={Logo_black} width="20"></img></td><td>{restaurant.type}{restaurant.pricerange}</td>
-                    <td>{restaurant.url}<td /> <td> </td>{restaurant.price_range}</td><td>Reviews {restaurant.number_of_reviews}</td>
-                    {/* <td><Link to={`/all/${restaurant.name}`}>Details</Link> </td> */}
-
-
+                    <td>{restaurant.id}</td><td><img src={restaurant.imgurl} alt="thumb" width="50"></img></td>
+                    <td>{restaurant.name}</td><td><img src={Logo_black} alt="Logo" width="20"></img></td>
+                    <td>{restaurant.type}{restaurant.pricerange}</td>
+                    <td>{restaurant.url}</td><td>{restaurant.price_range}</td>
+                    <td>Reviews {restaurant.number_of_reviews}</td>
                 </tr>
             )
         })
-        this.setState({ restaurants: restaurants })
+        this.setState({ restaurants: restaurants });
 
     }
-    
-   
+
     render() {
 
 
@@ -68,21 +46,18 @@ class Restaurants extends React.Component {
 
             <div>
 
-        
-           <img src={Powered_by_Foursquare_black_300} alt="p4s" width="200" align="right"></img>
+                <img src={Powered_by_Foursquare_black_300} alt="p4s" width="200" align="right"></img>
                 <table className="table">
-               
+
                     <thead>
-                   
-                        {this.state.headlines}
+                        <tr><th></th><th>Logo</th><th>Restaurant</th><th>Logo</th><th>Food Type</th><th>Home Page</th><th>Price Range</th><th>Reviews</th></tr>
                     </thead>
+
                     <tbody>
                         {this.state.restaurants}
-
                     </tbody>
-                </table>
 
-                {/* <Route path={`/all/:id`}  render={(props) => <Details {...props} />}/> */}
+                </table>
 
             </div>
 
@@ -91,8 +66,10 @@ class Restaurants extends React.Component {
 
 }
 
-export default Restaurants;
+export default UserSearchResult;
+
 const dummydata = [{
+    "id": "1",
     "name": "Dominos",
     "type": "fast food",
     "price_range": "cheap",
@@ -101,14 +78,16 @@ const dummydata = [{
     "imgurl": "http://mediacdn.dominos.co.il/_media/images/header/logo.png"
 },
 {
+    "id": "2",
     "name": "McDonalds",
     "type": "fast food, family",
     "price_range": "cheap",
     "number_of_reviews": "4",
     "url": "www.mcdonalds.dk",
-    "imgurl": "https://www.mcdonalds.com/content/dam/prelaunch/nordic/icons/m_logo.png"
+    "imgurl": "https://www.dominos.dk/x.gif.pagespeed.ce.wttFqPSUxL.gif"
 },
 {
+    "id": "3",
     "name": "Burger King",
     "type": "fast food, family",
     "price_range": "cheap",
@@ -117,6 +96,7 @@ const dummydata = [{
     "imgurl": "https://media-cdn.tripadvisor.com/media/photo-s/11/0f/6d/9c/burger-king.jpg"
 },
 {
+    "id": "4",
     "name": "Cafe Woody",
     "type": "family, local",
     "price_range": "expensive",
@@ -125,6 +105,7 @@ const dummydata = [{
     "imgurl": "http://cafewoody.dk/wp-content/uploads/2012/07/woody_logo21.png"
 },
 {
+    "id": "5",
     "name": "Sticks'nSushi",
     "type": "family, local, asian",
     "price_range": "expensive",
@@ -133,6 +114,7 @@ const dummydata = [{
     "imgurl": "https://www.dominos.dk/x.gif.pagespeed.ce.wttFqPSUxL.gif"
 },
 {
+    "id": "6",
     "name": "Big Mamma's Pizzaria",
     "type": "fast food, family, local, pizzaria",
     "price_range": "average",
@@ -141,6 +123,7 @@ const dummydata = [{
     "imgurl": "http://www.bigmamma-pizzahouse.dk/wp-content/themes/monmarthe/images/header-bg.jpg"
 },
 {
+    "id": "7",
     "name": "Rådvad Kro",
     "type": "luxus, family",
     "price_range": "expensive",
@@ -149,6 +132,7 @@ const dummydata = [{
     "imgurl": "http://www.raadvadkro.dk/images/logo.png"
 },
 {
+    "id": "8",
     "name": "Post-Pop Steakhouse",
     "type": "local, luxus, steakhouse",
     "price_range": "expensive",
@@ -157,6 +141,7 @@ const dummydata = [{
     "imgurl": "http://www.postpub.dk/wp-content/uploads/2016/07/Asset-1.svg"
 },
 {
+    "id": "9",
     "name": "Noma",
     "type": "luxus, gourmet",
     "price_range": "very expensive",
